@@ -9,7 +9,6 @@ body {
   background: #101522;
   color: #f4ead5;
   line-height: 1.6;
-  padding-bottom: 100px;
 }
 
 a {
@@ -287,11 +286,6 @@ h2 {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 900;
   border-top: 1px solid rgba(230, 184, 74, 0.25);
   padding: 30px 7%;
   background: rgba(16, 21, 34, 0.98);
