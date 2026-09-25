@@ -1,0 +1,62 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Prendre soin de son chien au quotidien",
+      "excerpt": "Les gestes simples qui rendent la vie de votre compagnon plus saine et plus heureuse.",
+      "category": "Conseils chiens",
+      "status": "published",
+      "updatedAt": "2026-09-25T09:42:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Les mots qui donnent vie aux idées",
+      "excerpt": "Une réflexion sur l'écriture comme espace de création et de transmission.",
+      "category": "Écriture",
+      "status": "published",
+      "updatedAt": "2026-09-24T16:20:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Carnet de croquis : premières recherches",
+      "excerpt": "Les étapes préparatoires d'une nouvelle série de dessins personnalisés.",
+      "category": "Art",
+      "status": "draft",
+      "updatedAt": "2026-09-12T12:00:00.000Z"
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "name": "Accueil",
+      "path": "index.html",
+      "description": "Page d'accueil et présentation de l'univers",
+      "title": "Prince-Abraham Junior Shègun ADJAHO",
+      "excerpt": "Un univers où le droit, les mots et l'art se rencontrent."
+    },
+    {
+      "id": "presentation",
+      "name": "Présentation",
+      "path": "presentation.html",
+      "description": "Parcours, valeurs et présentation personnelle",
+      "title": "Un parcours entre le droit, les mots et l'art.",
+      "excerpt": "Découvrez mon parcours, mes valeurs et les projets qui construisent mon univers."
+    },
+    {
+      "id": "contact",
+      "name": "Contact",
+      "path": "contact.html",
+      "description": "Coordonnées et formulaire de contact",
+      "title": "Parlons de votre projet.",
+      "excerpt": "Une question ou une idée ? Échangeons directement."
+    },
+    {
+      "id": "dogs",
+      "name": "Conseils chiens",
+      "path": "chiens.html",
+      "description": "Conseils et informations pour les propriétaires",
+      "title": "Bien vivre avec son chien.",
+      "excerpt": "Prendre soin d'un chien, c'est une responsabilité."
+    }
+  ]
+}

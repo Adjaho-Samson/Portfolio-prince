@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Administration - Prince-Abraham</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/img12.png" />
+  </head>
+  <body class="admin-body">
+    <section id="login-view" class="admin-login" aria-labelledby="login-title">
+      <div class="admin-login-card">
+        <a href="index.html" class="admin-brand">
+          <img src="images/logo.jpeg" alt="Prince-Abraham" />
+          <span>Prince-Abraham<small>Studio de contenu</small></span>
+        </a>
+        <p class="admin-kicker">ESPACE SECURISE</p>
+        <h1 id="login-title">Connexion administrateur</h1>
+        <p>Connectez-vous pour gérer les articles et les pages du site.</p>
+        <form id="login-form">
+          <label for="login-password">Mot de passe</label>
+          <input
+            id="login-password"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+          <button class="admin-action" type="submit">Se connecter</button>
+          <small id="login-error" class="login-error" role="alert"></small>
+        </form>
+      </div>
+    </section>
+    <main class="admin-shell">
+      <aside class="admin-sidebar">
+        <a href="index.html" class="admin-brand">
+          <img src="images/logo.jpeg" alt="Prince-Abraham" />
+          <span>Prince-Abraham<small>Studio de contenu</small></span>
+        </a>
+        <nav class="admin-nav" aria-label="Navigation administration">
+          <button class="admin-nav-link is-active" data-view="overview">
+            Vue d'ensemble
+          </button>
+          <button class="admin-nav-link" data-view="articles">Articles</button>
+          <button class="admin-nav-link" data-view="pages">
+            Pages du site
+          </button>
+        </nav>
+        <div class="admin-sidebar-foot">
+          <span class="status-dot"></span>
+          <span>Site en ligne</span>
+          <a href="index.html"
+            >Voir le site <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </aside>
+
+      <section class="admin-main">
+        <header class="admin-topbar">
+          <div>
+            <p class="admin-kicker">ESPACE ADMINISTRATEUR</p>
+            <h1 id="view-title">Vue d'ensemble</h1>
+          </div>
+          <div class="admin-user">
+            <span class="admin-avatar">PA</span>
+            <span
+              ><strong>Prince-Abraham</strong
+              ><small>Administrateur</small></span
+            >
+          </div>
+        </header>
+
+        <div class="admin-notice" role="note">
+          <strong>Stockage sécurisé</strong>
+          <span
+            >Les changements sont enregistrés dans la base de données du site.
+            Votre session administrateur est protégée.</span
+          >
+        </div>
+
+        <section id="overview-view" class="admin-view is-visible">
+          <div class="admin-heading-row">
+            <div>
+              <p class="admin-kicker">ACTIVITE DU SITE</p>
+              <h2>Le site en un coup d'oeil.</h2>
+            </div>
+            <span class="date-chip"
+              >Derniers 30 jours <span aria-hidden="true">⌄</span></span
+            >
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card metric-primary">
+              <span class="metric-label">Visites</span><strong>2 846</strong
+              ><small><em>+18,4 %</em> vs mois dernier</small>
+              <div class="metric-spark spark-gold">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Pages vues</span><strong>6 391</strong
+              ><small><em>+11,2 %</em> vs mois dernier</small>
+              <div class="metric-spark">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Demandes reçues</span
+              ><strong>47</strong><small><em>+6,8 %</em> vs mois dernier</small>
+              <div class="metric-spark">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Temps moyen</span><strong>02:48</strong
+              ><small><em>+0:24</em> vs mois dernier</small>
+              <div class="metric-spark">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </article>
+          </div>
+          <div class="admin-overview-grid">
+            <article class="admin-panel traffic-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="admin-kicker">FREQUENTATION</p>
+                  <h3>Visites cette semaine</h3>
+                </div>
+                <strong>+18,4 %</strong>
+              </div>
+              <div class="chart-wrap">
+                <div class="chart-y">
+                  <span>600</span><span>400</span><span>200</span><span>0</span>
+                </div>
+                <div class="chart">
+                  <div class="chart-line">
+                    <span style="--height: 34%"></span
+                    ><span style="--height: 47%"></span
+                    ><span style="--height: 42%"></span
+                    ><span style="--height: 64%"></span
+                    ><span style="--height: 55%"></span
+                    ><span style="--height: 83%"></span
+                    ><span style="--height: 72%"></span>
+                  </div>
+                  <div class="chart-x">
+                    <span>Lun</span><span>Mar</span><span>Mer</span
+                    ><span>Jeu</span><span>Ven</span><span>Sam</span
+                    ><span>Dim</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="admin-panel top-pages-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="admin-kicker">CONTENU</p>
+                  <h3>Pages les plus vues</h3>
+                </div>
+                <button class="text-button" data-view-link="pages">
+                  Gérer les pages →
+                </button>
+              </div>
+              <ol class="top-pages">
+                <li>
+                  <span><b>01</b>Accueil</span
+                  ><strong>1 248 <small>vues</small></strong>
+                </li>
+                <li>
+                  <span><b>02</b>Conseils chiens</span
+                  ><strong>842 <small>vues</small></strong>
+                </li>
+                <li>
+                  <span><b>03</b>Présentation</span
+                  ><strong>617 <small>vues</small></strong>
+                </li>
+                <li>
+                  <span><b>04</b>Écriture</span
+                  ><strong>486 <small>vues</small></strong>
+                </li>
+              </ol>
+            </article>
+          </div>
+          <article class="admin-panel activity-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="admin-kicker">JOURNAL</p>
+                <h3>Activité récente</h3>
+              </div>
+              <button class="text-button" data-view-link="articles">
+                Gérer le contenu →
+              </button>
+            </div>
+            <div class="activity-list">
+              <div>
+                <span class="activity-icon activity-publish">↗</span>
+                <p>
+                  <strong>Nouvel article publié</strong
+                  ><small>"Prendre soin de son chien au quotidien"</small>
+                </p>
+                <time>Il y a 2 h</time>
+              </div>
+              <div>
+                <span class="activity-icon activity-edit">✎</span>
+                <p>
+                  <strong>Page modifiée</strong
+                  ><small>La page « Présentation » a été mise à jour</small>
+                </p>
+                <time>Hier</time>
+              </div>
+              <div>
+                <span class="activity-icon activity-message">✉</span>
+                <p>
+                  <strong>Nouvelle demande de contact</strong
+                  ><small>Depuis la page Contact</small>
+                </p>
+                <time>Hier</time>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="articles-view" class="admin-view">
+          <div class="admin-heading-row">
+            <div>
+              <p class="admin-kicker">BIBLIOTHEQUE</p>
+              <h2>Articles</h2>
+              <p class="admin-subtitle">
+                Publiez, modifiez ou retirez vos contenus éditoriaux.
+              </p>
+            </div>
+            <button class="admin-action" id="new-article">
+              + Nouvel article
+            </button>
+          </div>
+          <div class="content-toolbar">
+            <label class="search-field"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="article-search"
+                type="search"
+                placeholder="Rechercher un article" /></label
+            ><select id="article-filter" aria-label="Filtrer les articles">
+              <option value="all">Tous les statuts</option>
+              <option value="published">Publié</option>
+              <option value="draft">Brouillon</option>
+            </select>
+          </div>
+          <div id="article-list" class="article-list"></div>
+        </section>
+
+        <section id="pages-view" class="admin-view">
+          <div class="admin-heading-row">
+            <div>
+              <p class="admin-kicker">STRUCTURE DU SITE</p>
+              <h2>Pages du site</h2>
+              <p class="admin-subtitle">
+                Modifiez les textes principaux affichés sur vos pages.
+              </p>
+            </div>
+          </div>
+          <div id="page-list" class="page-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="article-dialog" class="admin-dialog">
+      <form method="dialog" id="article-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="admin-kicker">EDITEUR</p>
+            <h2 id="dialog-title">Nouvel article</h2>
+          </div>
+          <button value="cancel" class="dialog-close" aria-label="Fermer">
+            ×
+          </button>
+        </div>
+        <input type="hidden" id="article-id" />
+        <label>Titre<input id="article-title" required maxlength="90" /></label>
+        <label
+          >Résumé<textarea
+            id="article-excerpt"
+            required
+            rows="3"
+            maxlength="180"
+          ></textarea>
+        </label>
+        <div class="form-row">
+          <label
+            >Catégorie<select id="article-category">
+              <option>Conseils chiens</option>
+              <option>Écriture</option>
+              <option>Actualité</option>
+              <option>Art</option>
+            </select></label
+          ><label
+            >Statut<select id="article-status">
+              <option value="published">Publié</option>
+              <option value="draft">Brouillon</option>
+            </select></label
+          >
+        </div>
+        <div class="dialog-actions">
+          <button value="cancel" class="admin-secondary">Annuler</button
+          ><button value="default" class="admin-action">
+            Enregistrer l'article
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="page-dialog" class="admin-dialog">
+      <form method="dialog" id="page-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="admin-kicker">EDITEUR DE PAGE</p>
+            <h2>Modifier la page</h2>
+          </div>
+          <button value="cancel" class="dialog-close" aria-label="Fermer">
+            ×
+          </button>
+        </div>
+        <input type="hidden" id="page-id" />
+        <label
+          >Titre principal<input id="page-title" required maxlength="90"
+        /></label>
+        <label
+          >Texte d'introduction<textarea
+            id="page-excerpt"
+            required
+            rows="4"
+            maxlength="220"
+          ></textarea>
+        </label>
+        <div class="dialog-actions">
+          <button value="cancel" class="admin-secondary">Annuler</button
+          ><button value="default" class="admin-action">
+            Enregistrer les modifications
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <script src="admin.js"></script>
+  </body>
+</html>
