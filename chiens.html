@@ -2,170 +2,473 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Conseils pour chiens - Prince-Abraham</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conseils pour chiens de Prince-Abraham Junior Shègun ADJAHO — alimentation, hygiène, promenades, éducation, sommeil et suivi santé. Nikè en images."
+    />
+    <title>Conseils pour chiens — Prince-Abraham</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/img12.png" />
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img src="images/logo.jpeg" alt="Prince-Abraham" />
-          <span>Prince-Abraham</span>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" id="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo" aria-label="Prince-Abraham Art — Accueil">
+          <img src="images/logo.jpeg" alt="" />
+          <span class="logo-word">Prince-Abraham <em>Art</em></span>
         </a>
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="burger" aria-label="Ouvrir le menu"
-          >☰</label
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-overlay"
+          aria-label="Ouvrir le menu"
         >
+          <span></span><span></span>
+        </button>
         <ul class="nav-links">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="presentation.html">Présentation</a></li>
+          <li><a href="presentation.html">Univers</a></li>
           <li><a href="juridique.html">Juridique</a></li>
           <li><a href="ecriture.html">Écriture</a></li>
           <li><a href="graffiti.html">Graffiti</a></li>
           <li><a href="dessin.html">Dessin</a></li>
-          <li><a href="chiens.html">Conseils chiens</a></li>
+          <li><a href="chiens.html" aria-current="page">Conseils chiens</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="page">
-      <p class="surtitle">CONSEILS POUR CHIENS</p>
-      <h1 data-reveal="editorial">Prendre soin<br /><span>de son compagnon.</span></h1>
+    <div class="menu-overlay" id="menu-overlay" hidden>
+      <p class="menu-overlay-kicker">Navigation</p>
+      <ul>
+        <li><a href="index.html"><span>01</span>Accueil</a></li>
+        <li><a href="presentation.html"><span>02</span>Univers</a></li>
+        <li><a href="juridique.html"><span>03</span>Juridique</a></li>
+        <li><a href="ecriture.html"><span>04</span>Écriture</a></li>
+        <li><a href="graffiti.html"><span>05</span>Graffiti</a></li>
+        <li><a href="dessin.html"><span>06</span>Dessin</a></li>
+        <li><a href="chiens.html" aria-current="page"><span>07</span>Conseils chiens</a></li>
+        <li><a href="contact.html"><span>08</span>Contact</a></li>
+      </ul>
+      <p class="menu-overlay-foot">
+        Prince-Abraham Junior Shègun ADJAHO — Bénin
+      </p>
+    </div>
 
-      <div class="page-content">
-        <p>
+    <main class="site-main" id="contenu">
+      <section class="page-hero">
+        <p class="surtitle">Conseils pour chiens</p>
+        <h1 class="page-hero-title" data-reveal="lines">
+          <span class="rv-line"><span>Prendre soin</span></span>
+          <span class="rv-line"><span><em>de son compagnon.</em></span></span>
+        </h1>
+        <p class="page-hero-lede">
           Nikè est une chienne d'un an, issue du croisement entre un Boerboel et
           un Berger allemand, deux grandes races. Très active, elle a de
           l'énergie à revendre et possède un tempérament affirmé, avec des
           traits de caractère hérités de ses deux origines.
         </p>
+        <p class="page-hero-sub" data-cms-excerpt>
+          Prendre soin d'un chien, c'est une responsabilité.
+        </p>
+        <svg
+          class="page-hero-brush"
+          viewBox="0 0 340 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            class="brush-path"
+            d="M 8 44 C 90 12, 200 52, 332 18"
+            stroke="#8E2638"
+            stroke-width="2.5"
+          />
+        </svg>
+      </section>
 
-        <section class="service-section">
-          <p class="surtitle">NIKÈ EN IMAGES</p>
-          <h2>Une compagne pleine <span>d'énergie.</span></h2>
-
-          <div class="dog-gallery gallery-grid">
-            <figure class="gallery-placeholder">
-              <img src="images/img7.jpeg" alt="Nikè assise dans le jardin" />
-              <figcaption>Une chienne attentive et observatrice.</figcaption>
-            </figure>
-            <figure class="gallery-placeholder">
-              <img src="images/img8.jpeg" alt="Nikè couchée dans le jardin" />
-              <figcaption>Un moment de repos après l'activité.</figcaption>
-            </figure>
-            <figure class="gallery-placeholder">
-              <img src="images/img9.jpeg" alt="Portrait de Nikè" />
-              <figcaption>Un regard vif et un caractère affirmé.</figcaption>
-            </figure>
-            <figure class="gallery-placeholder">
-              <img src="images/img10.jpeg" alt="Nikè assise près d'un mur" />
-              <figcaption>
-                Une grande chienne qui a besoin de repères.
-              </figcaption>
-            </figure>
-            <figure class="gallery-placeholder">
+      <section style="padding-top: var(--s-6)">
+        <div class="section-head section-head--row">
+          <p class="surtitle">Nikè en images</p>
+          <p class="section-head-note">Une compagne pleine d'énergie.</p>
+        </div>
+        <div class="gallery-grid dog-gallery">
+          <figure
+            class="gallery-placeholder"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir la photo : Nikè assise dans le jardin"
+          >
+            <div class="frame">
+              <img
+                src="images/img7.jpeg"
+                alt="Nikè assise dans le jardin"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              <span>01</span>
+              <h3>Dans le jardin</h3>
+              <p>Une chienne attentive et observatrice.</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="gallery-placeholder"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir la photo : Nikè couchée dans le jardin"
+          >
+            <div class="frame">
+              <img
+                src="images/img8.jpeg"
+                alt="Nikè couchée dans le jardin"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              <span>02</span>
+              <h3>Le repos</h3>
+              <p>Un moment de repos après l'activité.</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="gallery-placeholder"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir la photo : Portrait de Nikè"
+          >
+            <div class="frame">
+              <img
+                src="images/img9.jpeg"
+                alt="Portrait de Nikè"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              <span>03</span>
+              <h3>Portrait</h3>
+              <p>Un regard vif et un caractère affirmé.</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="gallery-placeholder"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir la photo : Nikè assise près d'un mur"
+          >
+            <div class="frame">
+              <img
+                src="images/img10.jpeg"
+                alt="Nikè assise près d'un mur"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              <span>04</span>
+              <h3>Près du mur</h3>
+              <p>Une grande chienne qui a besoin de repères.</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="gallery-placeholder"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir la photo : Nikè se reposant auprès de son maître"
+          >
+            <div class="frame">
               <img
                 src="images/img11.jpeg"
                 alt="Nikè se reposant auprès de son maître"
+                loading="lazy"
               />
-              <figcaption>
-                La complicité et la confiance se construisent.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section class="service-section">
-          <p class="surtitle">MES CONSEILS</p>
-          <h2>
-            Prendre soin d'un chien, c'est <span>une responsabilité.</span>
-          </h2>
-
-          <div class="service-grid">
-            <article class="service-card" data-reveal="stagger">
-              <span>01</span>
-              <h3>Alimentation</h3>
-              <p>
-                Un chien a besoin d'une alimentation complète et adaptée à son
-                âge, sa taille et son activité. Demande conseil à un vétérinaire
-                pour choisir les bons apports, avec de l'eau propre à volonté.
-              </p>
-            </article>
-            <article class="service-card" data-reveal="stagger">
-              <span>02</span>
-              <h3>Hygiène</h3>
-              <p>
-                Lave ton chien selon sa race, son pelage et ses besoins.
-                Brosse-le régulièrement et surveille ses oreilles, ses griffes
-                et l'état de sa peau.
-              </p>
-            </article>
-            <article class="service-card" data-reveal="stagger">
-              <span>03</span>
-              <h3>Promenades</h3>
-              <p>
-                Un chien actif a besoin de sorties régulières et de stimulation.
-                Utilise la laisse tant qu'il ne maîtrise pas correctement les
-                consignes.
-              </p>
-            </article>
-            <article class="service-card" data-reveal="stagger">
-              <span>04</span>
-              <h3>Éducation</h3>
-              <p>
-                L'éducation demande patience et constance. Un chien a besoin de
-                repères, pas de violence. Des règles simples et positives
-                favorisent son équilibre.
-              </p>
-            </article>
-            <article class="service-card" data-reveal="stagger">
+            </div>
+            <figcaption>
               <span>05</span>
-              <h3>Sommeil</h3>
-              <p>
-                Offre-lui un espace propre, calme et confortable ainsi que de
-                l'attention et de la bienveillance au quotidien.
-              </p>
-            </article>
-            <article class="service-card" data-reveal="stagger">
-              <span>06</span>
-              <h3>Suivi santé</h3>
-              <p>
-                Ne néglige pas les vaccins, les vermifuges et le suivi
-                vétérinaire. Les compléments ne doivent être donnés que sur
-                recommandation d'un professionnel.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="service-section advice-note">
-          <p class="surtitle">À RETENIR</p>
-          <h2>Chaque chien a <span>ses besoins.</span></h2>
-          <p>
-            L'âge, la race, la taille, le comportement et l'état de santé de ton
-            chien doivent guider les soins à lui apporter. En cas de doute ou de
-            problème de santé, demande conseil à un vétérinaire.
-          </p>
-        </section>
-
-        <div class="contact-buttons" data-reveal="editorial">
-          <a href="contact.html" class="contact-btn whatsapp-btn"
-            >Écrire pour demander conseil</a
-          >
+              <h3>La complicité</h3>
+              <p>La complicité et la confiance se construisent.</p>
+            </figcaption>
+          </figure>
         </div>
+      </section>
+
+      <section style="padding-top: var(--s-7)">
+        <div class="section-head section-head--row">
+          <p class="surtitle">Mes conseils</p>
+          <p class="section-head-note">
+            Touchez ou survolez une affiche pour la déplier.
+          </p>
+        </div>
+        <div class="advice-list">
+          <article class="advice" data-advice>
+            <button
+              class="advice-head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="advice-1"
+              id="advice-head-1"
+            >
+              <span class="advice-num">N°01</span>
+              <span class="advice-hook"
+                >Bien le nourrir, c'est déjà le <em>protéger.</em></span
+              >
+              <span class="advice-plus" aria-hidden="true">+</span>
+            </button>
+            <div class="advice-body" id="advice-1" role="region" aria-labelledby="advice-head-1">
+              <div>
+                <div class="advice-body-inner">
+                  <p class="advice-key">Alimentation</p>
+                  <div>
+                    <p>
+                      Un chien a besoin d'une alimentation complète et adaptée
+                      à son âge, sa taille et son activité. Demande conseil à
+                      un vétérinaire pour choisir les bons apports, avec de
+                      l'eau propre à volonté.
+                    </p>
+                    <button class="advice-next" type="button" data-next>
+                      Conseil suivant <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="advice" data-advice>
+            <button
+              class="advice-head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="advice-2"
+              id="advice-head-2"
+            >
+              <span class="advice-num">N°02</span>
+              <span class="advice-hook"
+                >Un pelage propre, un chien <em>serein.</em></span
+              >
+              <span class="advice-plus" aria-hidden="true">+</span>
+            </button>
+            <div class="advice-body" id="advice-2" role="region" aria-labelledby="advice-head-2">
+              <div>
+                <div class="advice-body-inner">
+                  <p class="advice-key">Hygiène</p>
+                  <div>
+                    <p>
+                      Lave ton chien selon sa race, son pelage et ses besoins.
+                      Brosse-le régulièrement et surveille ses oreilles, ses
+                      griffes et l'état de sa peau.
+                    </p>
+                    <button class="advice-next" type="button" data-next>
+                      Conseil suivant <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="advice" data-advice>
+            <button
+              class="advice-head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="advice-3"
+              id="advice-head-3"
+            >
+              <span class="advice-num">N°03</span>
+              <span class="advice-hook"
+                >L'énergie demande des <em>sorties.</em></span
+              >
+              <span class="advice-plus" aria-hidden="true">+</span>
+            </button>
+            <div class="advice-body" id="advice-3" role="region" aria-labelledby="advice-head-3">
+              <div>
+                <div class="advice-body-inner">
+                  <p class="advice-key">Promenades</p>
+                  <div>
+                    <p>
+                      Un chien actif a besoin de sorties régulières et de
+                      stimulation. Utilise la laisse tant qu'il ne maîtrise pas
+                      correctement les consignes.
+                    </p>
+                    <button class="advice-next" type="button" data-next>
+                      Conseil suivant <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="advice" data-advice>
+            <button
+              class="advice-head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="advice-4"
+              id="advice-head-4"
+            >
+              <span class="advice-num">N°04</span>
+              <span class="advice-hook"
+                >Des <em>repères,</em> pas de violence.</span
+              >
+              <span class="advice-plus" aria-hidden="true">+</span>
+            </button>
+            <div class="advice-body" id="advice-4" role="region" aria-labelledby="advice-head-4">
+              <div>
+                <div class="advice-body-inner">
+                  <p class="advice-key">Éducation</p>
+                  <div>
+                    <p>
+                      L'éducation demande patience et constance. Un chien a
+                      besoin de repères, pas de violence. Des règles simples et
+                      positives favorisent son équilibre.
+                    </p>
+                    <button class="advice-next" type="button" data-next>
+                      Conseil suivant <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="advice" data-advice>
+            <button
+              class="advice-head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="advice-5"
+              id="advice-head-5"
+            >
+              <span class="advice-num">N°05</span>
+              <span class="advice-hook"
+                >Un lieu <em>calme</em> pour se reposer.</span
+              >
+              <span class="advice-plus" aria-hidden="true">+</span>
+            </button>
+            <div class="advice-body" id="advice-5" role="region" aria-labelledby="advice-head-5">
+              <div>
+                <div class="advice-body-inner">
+                  <p class="advice-key">Sommeil</p>
+                  <div>
+                    <p>
+                      Offre-lui un espace propre, calme et confortable ainsi
+                      que de l'attention et de la bienveillance au quotidien.
+                    </p>
+                    <button class="advice-next" type="button" data-next>
+                      Conseil suivant <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="advice" data-advice>
+            <button
+              class="advice-head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="advice-6"
+              id="advice-head-6"
+            >
+              <span class="advice-num">N°06</span>
+              <span class="advice-hook"
+                ><em>Prévenir</em> plutôt que soigner.</span
+              >
+              <span class="advice-plus" aria-hidden="true">+</span>
+            </button>
+            <div class="advice-body" id="advice-6" role="region" aria-labelledby="advice-head-6">
+              <div>
+                <div class="advice-body-inner">
+                  <p class="advice-key">Suivi santé</p>
+                  <div>
+                    <p>
+                      Ne néglige pas les vaccins, les vermifuges et le suivi
+                      vétérinaire. Les compléments ne doivent être donnés que
+                      sur recommandation d'un professionnel.
+                    </p>
+                    <button class="advice-next" type="button" data-next>
+                      À retenir <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="notice" id="a-retenir" data-reveal="editorial">
+        <p class="surtitle">À retenir</p>
+        <p style="margin-top: var(--s-2)">
+          <strong>Chaque chien a ses besoins.</strong> L'âge, la race, la
+          taille, le comportement et l'état de santé de ton chien doivent
+          guider les soins à lui apporter. En cas de doute ou de problème de
+          santé, demande conseil à un vétérinaire.
+        </p>
+      </div>
+
+      <div class="contact-buttons" data-reveal="editorial">
+        <a href="contact.html" class="btn">Écrire pour demander conseil</a>
       </div>
     </main>
 
-    <footer><p>© 2026 Prince-Abraham Junior Shègun ADJAHO</p></footer>
+    <footer class="site-footer">
+      <p class="footer-giant" aria-hidden="true">Prince Art</p>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">Prince-Abraham <em>Art</em></p>
+          <p>
+            © 2026 Prince-Abraham Junior Shègun ADJAHO<br />Tous droits
+            réservés.
+          </p>
+        </div>
+        <nav aria-label="Pied de page">
+          <ul>
+            <li><a href="presentation.html">Univers</a></li>
+            <li><a href="juridique.html">Juridique</a></li>
+            <li><a href="ecriture.html">Écriture</a></li>
+            <li><a href="graffiti.html">Graffiti</a></li>
+            <li><a href="dessin.html">Dessin</a></li>
+            <li><a href="chiens.html">Conseils chiens</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <p class="surtitle">Me joindre</p>
+          <a
+            href="https://wa.me/2290198864845"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp</a
+          >
+          <a href="mailto:princeadjaho20@gmail.com">Email</a>
+          <a href="admin.html" class="admin-access">Accès administrateur</a>
+        </div>
+      </div>
+    </footer>
+
     <script src="public-content.js"></script>
     <script src="motion.js"></script>
   </body>

@@ -15,12 +15,22 @@ if (pageId) {
       const page = pages.find((item) => item.id === pageId);
       if (!page) return;
       document.title = `${page.title} - Prince-Abraham`;
-      const heading = document.querySelector("main h1");
-      const introduction = document.querySelector(
-        ".hero > p:not(.surtitle), .hero-content > p:not(.surtitle), .page-content > p",
-      );
-      if (heading) heading.textContent = page.title;
-      if (introduction) introduction.textContent = page.excerpt;
+      /* Éléments dédiés au contenu administrable (design préservé) */
+      const titleEl = document.querySelector("[data-cms-title]");
+      const excerptEl = document.querySelector("[data-cms-excerpt]");
+      if (titleEl) titleEl.textContent = page.title;
+      if (excerptEl) excerptEl.textContent = page.excerpt;
+      /* Repli historique si une page n'a pas encore ces marqueurs */
+      if (!titleEl) {
+        const heading = document.querySelector("main h1");
+        if (heading) heading.textContent = page.title;
+      }
+      if (!excerptEl) {
+        const introduction = document.querySelector(
+          ".hero > p:not(.surtitle), .hero-content > p:not(.surtitle), .page-content > p",
+        );
+        if (introduction) introduction.textContent = page.excerpt;
+      }
     })
     .catch(() => {});
 }

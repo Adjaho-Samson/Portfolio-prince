@@ -2,20 +2,23 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio de Prince-Abraham Junior Shègun ADJAHO — Juriste, Écrivain et Artiste (Graffiti & Dessin)."
+      content="Portfolio de Prince-Abraham Junior Shègun ADJAHO — Juriste, Écrivain et Artiste (Graffiti & Dessin). L'Atelier Vivant."
     />
-    <title>Prince-Abraham Junior Shègun ADJAHO</title>
+    <title>Prince-Abraham Junior Shègun ADJAHO — L'Atelier Vivant</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/img12.png" />
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -32,222 +35,456 @@
     gtag("config", "G-YNL0QST49E");
   </script>
   <body>
-    <!-- Introduction artistique : toile vierge qui prend vie -->
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <!-- Introduction artistique : la toile prend vie -->
     <div id="art-intro" class="art-intro" aria-hidden="true">
       <button id="intro-skip" class="intro-skip" type="button">
-        Passer l'introduction →
+        Passer l'introduction <span aria-hidden="true">→</span>
       </button>
-
-      <div class="intro-canvas">
+      <div class="intro-stage">
         <svg
-          class="intro-svg"
-          viewBox="0 0 800 420"
+          class="intro-brush"
+          viewBox="0 0 900 320"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
-          <!-- Trait de pinceau principal -->
           <path
-            class="brush-stroke stroke-1"
-            d="M 80 260 C 190 120, 340 310, 470 170 C 560 75, 650 185, 720 130"
-            stroke="#141413"
-            stroke-width="3.5"
-            stroke-linecap="round"
+            class="brush-path"
+            d="M 40 230 C 200 90, 360 280, 520 140 C 640 40, 760 170, 860 90"
+            stroke="#171717"
+            stroke-width="3"
           />
-          <!-- Ligne d'encre organique -->
           <path
-            class="brush-stroke stroke-2"
-            d="M 140 310 C 260 280, 380 140, 540 240 C 610 285, 670 210, 710 250"
-            stroke="#9E472A"
+            class="brush-path"
+            d="M 90 270 C 260 240, 400 110, 580 210 C 680 265, 770 180, 830 230"
+            stroke="#8E2638"
             stroke-width="2"
-            stroke-linecap="round"
           />
-          <!-- Courbe abstraite fine -->
           <path
-            class="brush-stroke stroke-3"
-            d="M 220 110 C 290 70, 410 95, 450 165 C 490 235, 390 320, 310 285"
-            stroke="#5A5854"
+            class="brush-path"
+            d="M 240 70 C 320 40, 430 60, 470 130 C 510 200, 410 280, 330 250"
+            stroke="#8C8982"
             stroke-width="1.25"
-            stroke-linecap="round"
-          />
-          <!-- Cercle d'atelier -->
-          <circle
-            class="brush-circle"
-            cx="400"
-            cy="210"
-            r="118"
-            stroke="#E6E1D8"
-            stroke-width="1"
           />
         </svg>
-
-        <div class="intro-typography">
-          <div class="intro-name-wrap">
-            <p class="intro-name">Prince-Abraham Junior Shègun ADJAHO</p>
-          </div>
-          <p class="intro-signature">Juriste • Écrivain • Artiste</p>
-        </div>
+        <figure class="intro-emblem">
+          <img src="images/logo.jpeg" alt="" />
+        </figure>
+        <p class="intro-kicker">L'Atelier Vivant</p>
+        <p class="intro-name">Prince-Abraham <em>Art</em></p>
+        <p class="intro-roles">Juriste · Écrivain · Artiste</p>
       </div>
     </div>
+    <noscript><style>.art-intro{display:none}</style></noscript>
 
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img src="images/logo.jpeg" alt="Prince-Abraham" />
-          <span>Prince-Abraham</span>
+    <header class="site-header" id="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo" aria-label="Prince-Abraham Art — Accueil">
+          <img src="images/logo.jpeg" alt="" />
+          <span class="logo-word">Prince-Abraham <em>Art</em></span>
         </a>
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="burger" aria-label="Ouvrir le menu"
-          >☰</label
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-overlay"
+          aria-label="Ouvrir le menu"
         >
+          <span></span><span></span>
+        </button>
         <ul class="nav-links">
           <li><a href="index.html" aria-current="page">Accueil</a></li>
-          <li><a href="presentation.html">À propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
+          <li><a href="presentation.html">Univers</a></li>
+          <li><a href="#univers">Compétences</a></li>
           <li><a href="chiens.html">Conseils chiens</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <div class="menu-overlay" id="menu-overlay" hidden>
+      <p class="menu-overlay-kicker">Navigation</p>
+      <ul>
+        <li><a href="index.html" aria-current="page"><span>01</span>Accueil</a></li>
+        <li><a href="presentation.html"><span>02</span>Univers</a></li>
+        <li><a href="juridique.html"><span>03</span>Juridique</a></li>
+        <li><a href="ecriture.html"><span>04</span>Écriture</a></li>
+        <li><a href="graffiti.html"><span>05</span>Graffiti</a></li>
+        <li><a href="dessin.html"><span>06</span>Dessin</a></li>
+        <li><a href="chiens.html"><span>07</span>Conseils chiens</a></li>
+        <li><a href="contact.html"><span>08</span>Contact</a></li>
+      </ul>
+      <p class="menu-overlay-foot">
+        Prince-Abraham Junior Shègun ADJAHO — Bénin
+      </p>
+    </div>
+
+    <main class="site-main" id="contenu">
+      <!-- HERO — composition monumentale -->
       <section class="hero">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <p class="surtitle">JURISTE • ÉCRIVAIN • ARTISTE</p>
-            <h1>
-              Prince-Abraham<br />Junior Shègun<br /><span>ADJAHO</span>
-            </h1>
-            <p>
-              Un univers où le droit, les mots et l'art se rencontrent pour
-              donner naissance à des projets singuliers.
-            </p>
-            <div class="buttons">
-              <a href="presentation.html" class="btn">Découvrir mon univers</a>
-              <a href="contact.html" class="btn secondary">Me contacter</a>
-            </div>
+        <p class="hero-side" aria-hidden="true">L'Atelier Vivant — Édition N°01</p>
+        <div class="hero-top">
+          <p class="surtitle">Juriste · Écrivain · Artiste</p>
+          <p class="hero-loc">Bénin — Atelier &amp; Droit</p>
+        </div>
+        <div class="hero-stage">
+          <svg
+            class="hero-brush"
+            viewBox="0 0 1200 420"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              class="brush-path"
+              d="M 30 300 C 260 120, 480 360, 720 200 C 900 80, 1040 230, 1170 150"
+              stroke="#8E2638"
+              stroke-width="3"
+            />
+            <path
+              class="brush-path"
+              d="M 120 360 C 340 320, 560 160, 800 260 C 950 320, 1060 240, 1140 290"
+              stroke="#171717"
+              stroke-width="1.5"
+            />
+          </svg>
+          <h1 class="hero-title">
+            <span class="ht-line"><span style="--d: 0.05s">Prince-</span></span>
+            <span class="ht-line"><span style="--d: 0.18s">Abraham</span></span>
+            <span class="ht-art" aria-hidden="true">Art</span>
+          </h1>
+          <figure class="hero-emblem" data-parallax="0.05">
+            <img
+              src="images/logo.jpeg"
+              alt="Emblème Prince-Abraham Art : couronne, balance de la justice, livre et plume d'or sur fond noir"
+            />
+            <figcaption class="hand">l'atelier — Bénin</figcaption>
+          </figure>
+          <p class="hero-fullname" data-cms-title>
+            Prince-Abraham Junior Shègun <strong>ADJAHO</strong>
+          </p>
+        </div>
+        <div class="hero-bottom">
+          <p class="hero-tagline" data-cms-excerpt>
+            Un univers où le droit, les mots et l'art se rencontrent pour
+            donner naissance à des projets singuliers.
+          </p>
+          <div class="hero-actions">
+            <a href="presentation.html" class="btn">Découvrir mon univers</a>
+            <a href="contact.html" class="btn btn--ghost">Me contacter</a>
           </div>
-
-          <div class="hero-portrait-wrap" data-parallax="0.04">
-            <div class="hero-portrait-frame">
-              <img
-                src="images/logo.jpeg"
-                alt="Portrait de Prince-Abraham Junior Shègun ADJAHO"
-                loading="eager"
-              />
-            </div>
-            <span class="portrait-caption">Atelier &amp; Droit — Bénin</span>
-          </div>
+          <p class="hero-scroll" aria-hidden="true">
+            Défiler <span>↓</span>
+          </p>
         </div>
       </section>
 
-      <section class="profile-section">
-        <div class="profile-photo" data-reveal="mask">
-          <img
-            src="images/logo.jpeg"
-            alt="Portrait de Prince-Abraham Junior Shègun ADJAHO"
-            loading="lazy"
-          />
+      <!-- Bandeau défilant -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Droit</span><i>✳</i><span>Écriture</span><i>✳</i
+          ><span>Graffiti</span><i>✳</i><span>Dessin</span><i>✳</i
+          ><span>Conseils</span><i>✳</i><span>Droit</span><i>✳</i
+          ><span>Écriture</span><i>✳</i><span>Graffiti</span><i>✳</i
+          ><span>Dessin</span><i>✳</i><span>Conseils</span><i>✳</i>
         </div>
-        <div class="profile-content" data-reveal="editorial">
-          <p class="surtitle">À PROPOS DE MOI</p>
-          <h2>Un parcours entre le droit, les mots et <span>l'art.</span></h2>
-          <p>
+      </div>
+
+      <!-- 01 — L'Univers -->
+      <section class="manifesto">
+        <div class="section-head">
+          <p class="surtitle">01 — L'Univers</p>
+        </div>
+        <h2 class="manifesto-title" data-reveal="lines">
+          <span class="rv-line"><span>Plusieurs compétences.</span></span>
+          <span class="rv-line"><span><em>Un même univers.</em></span></span>
+        </h2>
+        <div class="manifesto-grid">
+          <p class="manifesto-lede" data-reveal="editorial">
             Je suis Prince-Abraham Junior Shègun ADJAHO, juriste en formation,
-            écrivain et artiste. À travers ce site, je partage mes compétences,
-            mes créations et les projets qui construisent mon univers.
+            écrivain et artiste. À travers ce site, je partage mes
+            compétences, mes créations et les projets qui construisent mon
+            univers.
           </p>
-          <a href="presentation.html" class="btn">En savoir plus</a>
+          <div class="manifesto-side" data-reveal="editorial">
+            <p>
+              Je suis Prince-Abraham Junior Shègun ADJAHO, juriste en
+              formation, écrivain en herbe, artiste graffeur et dessinateur.
+            </p>
+            <p>
+              Ce site présente mes différents domaines de compétence afin de
+              permettre à chaque visiteur de découvrir directement l'univers
+              qui correspond à son besoin.
+            </p>
+            <a href="presentation.html" class="link-arrow"
+              >En savoir plus <span aria-hidden="true">→</span></a
+            >
+            <p class="hand manifesto-note" aria-hidden="true">
+              carnet n°1 — l'atelier
+            </p>
+          </div>
         </div>
+        <ul class="manifesto-words" data-reveal="stagger">
+          <li>
+            <span>Réfléchir.</span>
+            <small>Comprendre les situations avec méthode.</small>
+          </li>
+          <li>
+            <span>Créer.</span>
+            <small>Transformer une idée en texte ou en image.</small>
+          </li>
+          <li>
+            <span>Transmettre.</span>
+            <small>Partager des idées et des expériences.</small>
+          </li>
+        </ul>
       </section>
 
-      <section class="intro" data-reveal="editorial">
-        <p class="surtitle">BIENVENUE</p>
-        <h2>Plusieurs compétences.<br /><span>Un même univers.</span></h2>
-        <p>
-          Je suis Prince-Abraham Junior Shègun ADJAHO, juriste en formation,
-          écrivain en herbe, artiste graffeur et dessinateur.
-        </p>
-        <p>
-          Ce site présente mes différents domaines de compétence afin de
-          permettre à chaque visiteur de découvrir directement l'univers qui
-          correspond à son besoin.
-        </p>
-      </section>
+      <!-- 02 — Les Univers -->
+      <section class="disciplines" id="univers">
+        <div class="section-head section-head--row">
+          <p class="surtitle">02 — Les Univers</p>
+          <p class="section-head-note">Cinq territoires, une même signature.</p>
+        </div>
 
-      <section class="skills" id="skills">
-        <a
-          href="juridique.html"
-          class="skill-card"
-          data-reveal="stagger"
-          data-delay="0"
-          ><span>01</span>
-          <h3>Juridique</h3>
-          <p>
-            Découvrez mon parcours et mes compétences dans le domaine juridique.
-          </p>
-          <strong>Découvrir →</strong></a
-        >
-        <a
-          href="ecriture.html"
-          class="skill-card"
-          data-reveal="stagger"
-          data-delay="80"
-          ><span>02</span>
-          <h3>Écriture</h3>
-          <p>
-            Des textes, idées et créations littéraires façonnés par les mots.
-          </p>
-          <strong>Découvrir →</strong></a
-        >
+        <a href="juridique.html" class="discipline" data-reveal="editorial">
+          <span class="discipline-num">N°01</span>
+          <span class="discipline-body">
+            <span class="discipline-title">Juridique</span>
+            <span class="discipline-desc"
+              >Découvrez mon parcours et mes compétences dans le domaine
+              juridique.</span
+            >
+          </span>
+          <span class="discipline-motif" aria-hidden="true">
+            <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M60 10 V70 M35 78 H85 M60 18 L30 24 M60 18 L90 24" />
+              <path d="M30 24 L20 46 H40 Z M90 24 L80 46 H100 Z" />
+              <circle cx="60" cy="8" r="3" />
+            </svg>
+          </span>
+          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="ecriture.html" class="discipline" data-reveal="editorial">
+          <span class="discipline-num">N°02</span>
+          <span class="discipline-body">
+            <span class="discipline-title">Écriture</span>
+            <span class="discipline-desc"
+              >Des textes, idées et créations littéraires façonnés par les
+              mots.</span
+            >
+          </span>
+          <span class="discipline-motif" aria-hidden="true">
+            <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M30 78 C 40 40, 70 18, 100 12 C 96 44, 66 72, 30 78 Z" />
+              <path d="M30 78 C 55 58, 78 36, 100 12" />
+              <path d="M48 66 L44 74 M62 52 L58 60 M76 38 L72 46" />
+            </svg>
+          </span>
+          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+        </a>
+
         <a
           href="graffiti.html"
-          class="skill-card"
-          data-reveal="stagger"
-          data-delay="160"
-          ><span>03</span>
-          <h3>Graffiti</h3>
-          <p>Une expression artistique libre, urbaine et créative.</p>
-          <strong>Voir les créations →</strong></a
+          class="discipline discipline--media discipline--dark"
+          data-reveal="editorial"
         >
-        <a
-          href="dessin.html"
-          class="skill-card"
-          data-reveal="stagger"
-          data-delay="240"
-          ><span>04</span>
-          <h3>Dessin</h3>
-          <p>Découvrez mon univers graphique à travers mes créations.</p>
-          <strong>Découvrir →</strong></a
-        >
+          <span class="discipline-num">N°03</span>
+          <span class="discipline-body">
+            <span class="discipline-title">Graffiti</span>
+            <span class="discipline-desc"
+              >Une expression artistique libre, urbaine et créative.</span
+            >
+          </span>
+          <span class="discipline-media discipline-media--square">
+            <img
+              src="images/img1.jpeg"
+              alt="Tableau Bxller, lettrage graffiti aux couleurs vives"
+              loading="lazy"
+            />
+          </span>
+          <span class="discipline-cta">Voir les créations <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="dessin.html" class="discipline" data-reveal="editorial">
+          <span class="discipline-num">N°04</span>
+          <span class="discipline-body">
+            <span class="discipline-title">Dessin</span>
+            <span class="discipline-desc"
+              >Découvrez mon univers graphique à travers mes créations.</span
+            >
+          </span>
+          <span class="discipline-motif" aria-hidden="true">
+            <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M24 66 L78 12 L92 26 L38 80 L20 82 Z" />
+              <path d="M78 12 L84 6 L98 20 L92 26" />
+              <path d="M14 84 H106" stroke-dasharray="3 5" />
+            </svg>
+          </span>
+          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+        </a>
+
         <a
           href="chiens.html"
-          class="skill-card"
-          data-reveal="stagger"
-          data-delay="320"
-          ><span>05</span>
-          <h3>Conseils pour chien</h3>
-          <p>Prendre soin d'un chien, c'est une responsabilité.</p>
-          <strong>Découvrir →</strong></a
+          class="discipline discipline--media"
+          data-reveal="editorial"
         >
+          <span class="discipline-num">N°05</span>
+          <span class="discipline-body">
+            <span class="discipline-title">Conseils pour chien</span>
+            <span class="discipline-desc"
+              >Prendre soin d'un chien, c'est une responsabilité.</span
+            >
+          </span>
+          <span class="discipline-media discipline-media--portrait">
+            <img
+              src="images/img9.jpeg"
+              alt="Portrait de Nikè, chienne de Prince-Abraham"
+              loading="lazy"
+            />
+          </span>
+          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+        </a>
       </section>
 
-      <section class="home-cta" data-reveal="editorial">
-        <p class="surtitle">UN PROJET ?</p>
-        <h2>Une idée mérite<br /><span>de prendre forme.</span></h2>
-        <p>
-          Une demande juridique, un projet artistique ou un besoin d'écriture ?
-          Échangeons directement.
+      <!-- 03 — Œuvres -->
+      <section class="oeuvres">
+        <div class="section-head section-head--row">
+          <p class="surtitle">03 — Œuvres</p>
+          <a href="graffiti.html" class="link-arrow"
+            >Toutes les créations <span aria-hidden="true">→</span></a
+          >
+        </div>
+        <div class="oeuvres-grid">
+          <figure
+            class="gallery-placeholder oeuvre oeuvre--main"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir l'œuvre : Tableau Bxller"
+          >
+            <div class="frame">
+              <img
+                src="images/img1.jpeg"
+                alt="Tableau Bxller, réalisation graffiti"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              <span>01</span>
+              <h3>Tableau Bxller</h3>
+              <p>Lettrage graffiti aux couleurs vives sur fond noir.</p>
+            </figcaption>
+          </figure>
+          <figure
+            class="gallery-placeholder oeuvre oeuvre--wide"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir l'œuvre : Atella"
+          >
+            <div class="frame">
+              <img
+                src="images/img2.jpeg"
+                alt="Lettrage Atella, réalisation graffiti"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              <span>02</span>
+              <h3>Atella</h3>
+              <p>
+                Prénom personnalisé en lettres orange et rose, avec une
+                couronne.
+              </p>
+            </figcaption>
+          </figure>
+          <figure
+            class="gallery-placeholder oeuvre oeuvre--small"
+            data-reveal="mask"
+            tabindex="0"
+            role="button"
+            aria-label="Agrandir l'œuvre : Woman"
+          >
+            <div class="frame">
+              <img
+                src="images/img5.jpeg"
+                alt="Lettrage Woman, réalisation graffiti"
+                loading="lazy"
+              />
+            </div>
+            <figcaption>
+              <span>05</span>
+              <h3>Woman</h3>
+              <p>Lettrage violet au style énergique et expressif.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 04 — Contact -->
+      <section class="cta" data-reveal="editorial">
+        <p class="surtitle surtitle--light">04 — Un projet ?</p>
+        <h2 class="cta-title">
+          Une idée mérite<br />de <em>prendre forme.</em>
+        </h2>
+        <p class="cta-text">
+          Une demande juridique, un projet artistique ou un besoin
+          d'écriture ? Échangeons directement.
         </p>
-        <a href="contact.html" class="btn">Parlons-en</a>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn--bordeaux">Parlons-en</a>
+          <a
+            href="https://wa.me/2290198864845"
+            class="btn btn--ghost-light"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp</a
+          >
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>
-        © 2026 Prince-Abraham Junior Shègun ADJAHO<br />Tous droits réservés.
-      </p>
-      <a href="admin.html" class="admin-access">Accès administrateur</a>
+    <footer class="site-footer">
+      <p class="footer-giant" aria-hidden="true">Prince Art</p>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">Prince-Abraham <em>Art</em></p>
+          <p>
+            © 2026 Prince-Abraham Junior Shègun ADJAHO<br />Tous droits
+            réservés.
+          </p>
+        </div>
+        <nav aria-label="Pied de page">
+          <ul>
+            <li><a href="presentation.html">Univers</a></li>
+            <li><a href="juridique.html">Juridique</a></li>
+            <li><a href="ecriture.html">Écriture</a></li>
+            <li><a href="graffiti.html">Graffiti</a></li>
+            <li><a href="dessin.html">Dessin</a></li>
+            <li><a href="chiens.html">Conseils chiens</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <p class="surtitle">Me joindre</p>
+          <a
+            href="https://wa.me/2290198864845"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp</a
+          >
+          <a href="mailto:princeadjaho20@gmail.com">Email</a>
+          <a href="admin.html" class="admin-access">Accès administrateur</a>
+        </div>
+      </div>
     </footer>
+
     <script src="public-content.js"></script>
     <script src="motion.js"></script>
   </body>

@@ -2,32 +2,48 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Juridique - Prince-Abraham</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Univers juridique de Prince-Abraham Junior Shègun ADJAHO — recherche documentaire, relecture et rédaction structurée."
+    />
+    <title>Juridique — Prince-Abraham</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/img12.png" />
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img src="images/logo.jpeg" alt="Prince-Abraham" />
-          <span>Prince-Abraham</span>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" id="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo" aria-label="Prince-Abraham Art — Accueil">
+          <img src="images/logo.jpeg" alt="" />
+          <span class="logo-word">Prince-Abraham <em>Art</em></span>
         </a>
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="burger" aria-label="Ouvrir le menu"
-          >☰</label
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-overlay"
+          aria-label="Ouvrir le menu"
         >
+          <span></span><span></span>
+        </button>
         <ul class="nav-links">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="presentation.html">Présentation</a></li>
-          <li><a href="juridique.html">Juridique</a></li>
+          <li><a href="presentation.html">Univers</a></li>
+          <li><a href="juridique.html" aria-current="page">Juridique</a></li>
           <li><a href="ecriture.html">Écriture</a></li>
           <li><a href="graffiti.html">Graffiti</a></li>
           <li><a href="dessin.html">Dessin</a></li>
@@ -37,76 +53,144 @@
       </nav>
     </header>
 
-    <main class="page">
-      <p class="surtitle">01 — JURIDIQUE</p>
-      <h1 data-reveal="juridique">Le droit,<br /><span>avec méthode.</span></h1>
+    <div class="menu-overlay" id="menu-overlay" hidden>
+      <p class="menu-overlay-kicker">Navigation</p>
+      <ul>
+        <li><a href="index.html"><span>01</span>Accueil</a></li>
+        <li><a href="presentation.html"><span>02</span>Univers</a></li>
+        <li><a href="juridique.html" aria-current="page"><span>03</span>Juridique</a></li>
+        <li><a href="ecriture.html"><span>04</span>Écriture</a></li>
+        <li><a href="graffiti.html"><span>05</span>Graffiti</a></li>
+        <li><a href="dessin.html"><span>06</span>Dessin</a></li>
+        <li><a href="chiens.html"><span>07</span>Conseils chiens</a></li>
+        <li><a href="contact.html"><span>08</span>Contact</a></li>
+      </ul>
+      <p class="menu-overlay-foot">
+        Prince-Abraham Junior Shègun ADJAHO — Bénin
+      </p>
+    </div>
 
-      <div class="page-content">
-        <p>
+    <main class="site-main" id="contenu">
+      <section class="page-hero">
+        <p class="surtitle">01 — Juridique</p>
+        <h1 class="page-hero-title" data-reveal="lines">
+          <span class="rv-line"><span>Le droit,</span></span>
+          <span class="rv-line"><span><em>avec méthode.</em></span></span>
+        </h1>
+        <p class="page-hero-lede">
           Je suis juriste en formation et je développe progressivement mes
           compétences dans le domaine juridique.
         </p>
+        <svg
+          class="page-hero-brush"
+          viewBox="0 0 340 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            class="brush-path"
+            d="M 8 44 C 90 12, 200 52, 332 18"
+            stroke="#8E2638"
+            stroke-width="2.5"
+          />
+        </svg>
+      </section>
+
+      <p class="page-intro" data-reveal="editorial">
+        Cette page présente les domaines dans lesquels je peux proposer un
+        accompagnement et les différents services pouvant être demandés.
+      </p>
+
+      <section>
+        <div class="section-head section-head--row">
+          <p class="surtitle">Services proposés</p>
+          <p class="section-head-note">Un accompagnement clair et organisé.</p>
+        </div>
+        <div class="service-list" data-reveal="stagger">
+          <article class="service-row">
+            <span>01</span>
+            <h3>Recherche documentaire</h3>
+            <p>
+              Recherche et organisation de ressources juridiques sur un sujet
+              précis.
+            </p>
+          </article>
+          <article class="service-row">
+            <span>02</span>
+            <h3>Relecture de documents</h3>
+            <p>
+              Relecture de la forme et repérage des points à clarifier dans un
+              document.
+            </p>
+          </article>
+          <article class="service-row">
+            <span>03</span>
+            <h3>Rédaction structurée</h3>
+            <p>
+              Aide à la présentation et à la structuration de contenus
+              juridiques.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <div class="notice" data-reveal="editorial">
         <p>
-          Cette page présente les domaines dans lesquels je peux proposer un
-          accompagnement et les différents services pouvant être demandés.
+          Pour toute demande particulière, contactez-moi afin d'échanger sur
+          votre besoin et les modalités possibles.
         </p>
+      </div>
 
-        <section class="service-section">
-          <p class="surtitle">SERVICES PROPOSÉS</p>
-          <h2>Un accompagnement <span>clair et organisé.</span></h2>
-          <div class="service-grid">
-            <article class="service-card" data-reveal="stagger">
-              <span>01</span>
-              <h3>Recherche documentaire</h3>
-              <p>
-                Recherche et organisation de ressources juridiques sur un sujet
-                précis.
-              </p>
-            </article>
-            <article class="service-card" data-reveal="stagger">
-              <span>02</span>
-              <h3>Relecture de documents</h3>
-              <p>
-                Relecture de la forme et repérage des points à clarifier dans un
-                document.
-              </p>
-            </article>
-            <article class="service-card" data-reveal="stagger">
-              <span>03</span>
-              <h3>Rédaction structurée</h3>
-              <p>
-                Aide à la présentation et à la structuration de contenus
-                juridiques.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <div class="notice">
-          <p>
-            Pour toute demande particulière, contactez-moi afin d'échanger sur
-            votre besoin et les modalités possibles.
-          </p>
-        </div>
-
-        <div class="contact-buttons" data-reveal="editorial">
-          <a
-            href="https://wa.me/2290198864845"
-            class="contact-btn whatsapp-btn"
-            target="_blank"
-            rel="noopener"
-            >Contacter sur WhatsApp</a
-          >
-          <a
-            href="mailto:princeadjaho20@gmail.com"
-            class="contact-btn email-btn"
-            >Envoyer un email</a
-          >
-        </div>
+      <div class="contact-buttons" data-reveal="editorial">
+        <a
+          href="https://wa.me/2290198864845"
+          class="btn"
+          target="_blank"
+          rel="noopener"
+          >Contacter sur WhatsApp</a
+        >
+        <a href="mailto:princeadjaho20@gmail.com" class="btn btn--ghost"
+          >Envoyer un email</a
+        >
       </div>
     </main>
 
-    <footer><p>© 2026 Prince-Abraham Junior Shègun ADJAHO</p></footer>
+    <footer class="site-footer">
+      <p class="footer-giant" aria-hidden="true">Prince Art</p>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">Prince-Abraham <em>Art</em></p>
+          <p>
+            © 2026 Prince-Abraham Junior Shègun ADJAHO<br />Tous droits
+            réservés.
+          </p>
+        </div>
+        <nav aria-label="Pied de page">
+          <ul>
+            <li><a href="presentation.html">Univers</a></li>
+            <li><a href="juridique.html">Juridique</a></li>
+            <li><a href="ecriture.html">Écriture</a></li>
+            <li><a href="graffiti.html">Graffiti</a></li>
+            <li><a href="dessin.html">Dessin</a></li>
+            <li><a href="chiens.html">Conseils chiens</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <p class="surtitle">Me joindre</p>
+          <a
+            href="https://wa.me/2290198864845"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp</a
+          >
+          <a href="mailto:princeadjaho20@gmail.com">Email</a>
+          <a href="admin.html" class="admin-access">Accès administrateur</a>
+        </div>
+      </div>
+    </footer>
+
     <script src="public-content.js"></script>
     <script src="motion.js"></script>
   </body>
