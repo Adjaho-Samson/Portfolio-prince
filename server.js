@@ -206,6 +206,13 @@ async function handleApi(request, response, url) {
     const content = await readContent();
     return sendJson(response, 200, content.pages);
   }
+  if (request.method === "GET" && url.pathname === "/api/public/articles") {
+    const content = await readContent();
+    const published = content.articles
+      .filter((article) => article.status === "published")
+      .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+    return sendJson(response, 200, published);
+  }
   if (!requireAuth(request, response)) return true;
 
   const content = await readContent();
@@ -308,6 +315,9 @@ async function serveStatic(response, url) {
       ".jpeg": "image/jpeg",
       ".jpg": "image/jpeg",
       ".png": "image/png",
+      ".webp": "image/webp",
+      ".svg": "image/svg+xml; charset=utf-8",
+      ".ico": "image/x-icon",
     };
     response.writeHead(200, {
       "content-type": types[extension] || "application/octet-stream",
@@ -333,6 +343,6 @@ const server = http.createServer(async (request, response) => {
   }
 });
 
-server.listen(port, () =>
+server.listen(port, "0.0.0.0", () =>
   console.log(`Site disponible sur http://localhost:${port}`),
 );

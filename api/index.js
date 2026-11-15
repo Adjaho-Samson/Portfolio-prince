@@ -183,6 +183,11 @@ export default async function handler(request, response) {
         await sql`SELECT id, name, path, description, title, excerpt FROM pages`;
       return json(response, 200, result.rows.map(pageFromRow));
     }
+    if (request.method === "GET" && url.pathname === "/api/public/articles") {
+      const result =
+        await sql`SELECT id, title, excerpt, category, status, updated_at FROM articles WHERE status = 'published' ORDER BY updated_at DESC`;
+      return json(response, 200, result.rows.map(articleFromRow));
+    }
     if (!requireAuth(request, response)) return;
     if (request.method === "GET" && url.pathname === "/api/articles") {
       const result =

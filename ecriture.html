@@ -27,7 +27,7 @@
     <header class="site-header" id="site-header">
       <nav class="navbar" aria-label="Navigation principale">
         <a href="index.html" class="logo" aria-label="Prince-Abraham Art — Accueil">
-          <img src="images/logo.jpeg" alt="" />
+          <img src="images/logo.jpeg" alt="" width="1080" height="720" />
           <span class="logo-word">Prince-Abraham <em>Art</em></span>
         </a>
         <button
@@ -47,8 +47,8 @@
           <li><a href="ecriture.html" aria-current="page">Écriture</a></li>
           <li><a href="graffiti.html">Graffiti</a></li>
           <li><a href="dessin.html">Dessin</a></li>
-          <li><a href="chiens.html">Conseils chiens</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="chiens.html">Chiens</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -70,7 +70,15 @@
       </p>
     </div>
 
-    <main class="site-main" id="contenu">
+    <main class="site-main" id="contenu" tabindex="-1">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <a href="presentation.html">Univers</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Écriture</span>
+      </nav>
+
       <section class="page-hero">
         <p class="surtitle">02 — Écriture</p>
         <h1 class="page-hero-title" data-reveal="lines">
@@ -139,6 +147,31 @@
         <strong>faire ressentir</strong>. »
       </blockquote>
 
+      <section class="publications-section" data-articles-section>
+        <div class="section-head section-head--row">
+          <p class="surtitle">Textes publiés</p>
+          <p class="section-head-note">Extraits du carnet littéraire.</p>
+        </div>
+        <div
+          class="publications-grid"
+          data-cms-articles
+          data-cms-category="Écriture"
+          data-hide-if-empty
+        >
+          <article class="publication-card">
+            <div class="publication-meta">
+              <span class="publication-tag">Écriture</span>
+              <time datetime="2026-09-24">24 septembre 2026</time>
+            </div>
+            <h3>Les mots qui donnent vie aux idées</h3>
+            <p>
+              Une réflexion sur l'écriture comme espace de création et de
+              transmission.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <div class="contact-buttons" data-reveal="editorial">
         <a
           href="https://wa.me/2290198864845"
@@ -151,6 +184,17 @@
           >Envoyer un email</a
         >
       </div>
+
+      <nav class="universe-pager" aria-label="Explorer les disciplines">
+        <a href="juridique.html" class="universe-pager-link">
+          <small>Discipline précédente</small>
+          <span>← Juridique</span>
+        </a>
+        <a href="graffiti.html" class="universe-pager-link universe-pager-next">
+          <small>Discipline suivante</small>
+          <span>Graffiti →</span>
+        </a>
+      </nav>
     </main>
 
     <footer class="site-footer">
@@ -165,6 +209,7 @@
         </div>
         <nav aria-label="Pied de page">
           <ul>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="presentation.html">Univers</a></li>
             <li><a href="juridique.html">Juridique</a></li>
             <li><a href="ecriture.html">Écriture</a></li>
@@ -183,7 +228,10 @@
             >WhatsApp</a
           >
           <a href="mailto:princeadjaho20@gmail.com">Email</a>
-          <a href="admin.html" class="admin-access">Accès administrateur</a>
+          <a href="admin.html" class="admin-access">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Accès administrateur</span>
+          </a>
         </div>
       </div>
     </footer>

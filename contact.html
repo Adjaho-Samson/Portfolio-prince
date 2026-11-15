@@ -27,7 +27,7 @@
     <header class="site-header" id="site-header">
       <nav class="navbar" aria-label="Navigation principale">
         <a href="index.html" class="logo" aria-label="Prince-Abraham Art — Accueil">
-          <img src="images/logo.jpeg" alt="" />
+          <img src="images/logo.jpeg" alt="" width="1080" height="720" />
           <span class="logo-word">Prince-Abraham <em>Art</em></span>
         </a>
         <button
@@ -47,8 +47,8 @@
           <li><a href="ecriture.html">Écriture</a></li>
           <li><a href="graffiti.html">Graffiti</a></li>
           <li><a href="dessin.html">Dessin</a></li>
-          <li><a href="chiens.html">Conseils chiens</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="chiens.html">Chiens</a></li>
+          <li><a href="contact.html" class="nav-cta" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -70,7 +70,13 @@
       </p>
     </div>
 
-    <main class="site-main" id="contenu">
+    <main class="site-main" id="contenu" tabindex="-1">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Contact</span>
+      </nav>
+
       <section class="page-hero">
         <p class="surtitle">Contact</p>
         <h1 class="contact-hero-title" data-reveal="lines">
@@ -99,31 +105,139 @@
 
       <p class="page-intro" data-reveal="editorial">
         Vous souhaitez demander un service, obtenir davantage d'informations ou
-        discuter d'un projet ? Vous pouvez contacter directement Prince-Abraham
-        par WhatsApp ou par email.
+        discuter d'un projet ? Préparez votre message ci-dessous ou contactez
+        directement Prince-Abraham par WhatsApp ou email.
       </p>
 
-      <div class="contact-channels" data-reveal="stagger">
-        <a
-          class="contact-channel"
-          href="https://wa.me/2290198864845"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>
-            <h2>WhatsApp</h2>
-            <p>Commander ou demander un service, en direct.</p>
-          </span>
-          <span class="channel-arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="contact-channel" href="mailto:princeadjaho20@gmail.com">
-          <span>
-            <h2>Email</h2>
-            <p>princeadjaho20@gmail.com — pour les demandes détaillées.</p>
-          </span>
-          <span class="channel-arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
+      <section class="contact-grid">
+        <div class="contact-composer-card" data-reveal="editorial">
+          <p class="surtitle">Assistant de message</p>
+          <h2>Préparer votre demande</h2>
+          <p class="contact-composer-note">
+            Remplissez ces quelques champs : votre message s'ouvre prêt à être envoyé sur WhatsApp ou dans votre messagerie.
+          </p>
+
+          <div
+            id="contact-error-summary"
+            class="form-error-summary"
+            role="alert"
+            tabindex="-1"
+            hidden
+          >
+            <strong>Veuillez corriger les champs suivants :</strong>
+            <ul id="contact-error-list"></ul>
+          </div>
+
+          <form id="contact-composer" novalidate>
+            <div class="form-field">
+              <label for="contact-topic">Univers concerné</label>
+              <select id="contact-topic" name="topic">
+                <option value="Juridique">Juridique — recherche, relecture ou rédaction</option>
+                <option value="Écriture">Écriture — texte, correction ou poème</option>
+                <option value="Graffiti">Graffiti — lettrage ou tableau personnalisé</option>
+                <option value="Dessin">Dessin — portrait, illustration ou croquis</option>
+                <option value="Conseils chiens">Conseils pour chiens</option>
+                <option value="Autre projet">Autre demande</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-name">Votre nom <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Ex. Kévin Mensah"
+                aria-describedby="contact-name-error"
+                required
+              />
+              <p id="contact-name-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Votre message <span class="required-mark" aria-hidden="true">*</span></label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="4"
+                placeholder="Décrivez votre idée, les délais souhaités ou votre question..."
+                aria-describedby="contact-message-hint contact-message-error"
+                required
+              ></textarea>
+              <p id="contact-message-hint" class="field-hint">
+                Précisez si possible l'objectif et vos préférences (format, ton, échéance).
+              </p>
+              <p id="contact-message-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="contact-composer-actions">
+              <button type="submit" class="btn">
+                <span>Envoyer sur WhatsApp</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </button>
+              <button type="button" id="compose-email" class="btn btn--ghost">
+                <span>Ouvrir par Email</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-channels" data-reveal="stagger">
+          <div class="contact-channel-item">
+            <a
+              class="contact-channel"
+              href="https://wa.me/2290198864845"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>
+                <h2>WhatsApp</h2>
+                <p>+229 01 98 86 48 45 — Commander ou échanger en direct.</p>
+              </span>
+              <span class="channel-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </a>
+            <button
+              type="button"
+              class="copy-chip"
+              data-copy="+229 01 98 86 48 45"
+              data-copy-label="Numéro WhatsApp"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copier le numéro</span>
+            </button>
+          </div>
+
+          <div class="contact-channel-item">
+            <a class="contact-channel" href="mailto:princeadjaho20@gmail.com">
+              <span>
+                <h2>Email</h2>
+                <p>princeadjaho20@gmail.com — Pour les demandes détaillées.</p>
+              </span>
+              <span class="channel-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </a>
+            <button
+              type="button"
+              class="copy-chip"
+              data-copy="princeadjaho20@gmail.com"
+              data-copy-label="Adresse email"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copier l'email</span>
+            </button>
+          </div>
+
+          <div class="contact-availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <p>Basé au Bénin · Réponse habituelle sous 24 heures.</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -138,6 +252,7 @@
         </div>
         <nav aria-label="Pied de page">
           <ul>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="presentation.html">Univers</a></li>
             <li><a href="juridique.html">Juridique</a></li>
             <li><a href="ecriture.html">Écriture</a></li>
@@ -156,7 +271,10 @@
             >WhatsApp</a
           >
           <a href="mailto:princeadjaho20@gmail.com">Email</a>
-          <a href="admin.html" class="admin-access">Accès administrateur</a>
+          <a href="admin.html" class="admin-access">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Accès administrateur</span>
+          </a>
         </div>
       </div>
     </footer>
