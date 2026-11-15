@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Dessin - Prince-Abraham</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="images/img12.png" />
   </head>
@@ -33,7 +39,7 @@
 
     <main class="page">
       <p class="surtitle">04 — DESSIN</p>
-      <h1>Transformer<br /><span>une idée en image.</span></h1>
+      <h1 data-reveal="editorial">Transformer<br /><span>une idée en image.</span></h1>
 
       <div class="page-content">
         <p>
@@ -49,12 +55,12 @@
           <p class="surtitle">SERVICES PROPOSÉS</p>
           <h2>Donner une image à <span>tes idées.</span></h2>
           <div class="service-grid">
-            <article class="service-card">
+            <article class="service-card" data-reveal="stagger">
               <span>01</span>
               <h3>Portrait</h3>
               <p>Création d'un portrait à partir d'une photo ou d'une idée.</p>
             </article>
-            <article class="service-card">
+            <article class="service-card" data-reveal="stagger">
               <span>02</span>
               <h3>Illustration</h3>
               <p>
@@ -62,7 +68,7 @@
                 histoire.
               </p>
             </article>
-            <article class="service-card">
+            <article class="service-card" data-reveal="stagger">
               <span>03</span>
               <h3>Croquis personnalisé</h3>
               <p>
@@ -72,7 +78,7 @@
           </div>
         </section>
 
-        <div class="art-highlight">
+        <div class="art-highlight" data-reveal="editorial">
           <p class="surtitle">L'APPROCHE</p>
           <h2>Du concept<br /><span>à la création.</span></h2>
           <p>
@@ -81,7 +87,7 @@
           </p>
         </div>
 
-        <div class="contact-buttons">
+        <div class="contact-buttons" data-reveal="editorial">
           <a
             href="https://wa.me/2290198864845"
             class="contact-btn whatsapp-btn"
@@ -100,5 +106,6 @@
 
     <footer><p>© 2026 Prince-Abraham Junior Shègun ADJAHO</p></footer>
     <script src="public-content.js"></script>
+    <script src="motion.js"></script>
   </body>
 </html>

@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Prince-Abraham Junior Shègun ADJAHO — Juriste, Écrivain et Artiste (Graffiti & Dessin)."
+    />
     <title>Prince-Abraham Junior Shègun ADJAHO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="images/img12.png" />
   </head>
@@ -22,6 +32,63 @@
     gtag("config", "G-YNL0QST49E");
   </script>
   <body>
+    <!-- Introduction artistique : toile vierge qui prend vie -->
+    <div id="art-intro" class="art-intro" aria-hidden="true">
+      <button id="intro-skip" class="intro-skip" type="button">
+        Passer l'introduction →
+      </button>
+
+      <div class="intro-canvas">
+        <svg
+          class="intro-svg"
+          viewBox="0 0 800 420"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Trait de pinceau principal -->
+          <path
+            class="brush-stroke stroke-1"
+            d="M 80 260 C 190 120, 340 310, 470 170 C 560 75, 650 185, 720 130"
+            stroke="#141413"
+            stroke-width="3.5"
+            stroke-linecap="round"
+          />
+          <!-- Ligne d'encre organique -->
+          <path
+            class="brush-stroke stroke-2"
+            d="M 140 310 C 260 280, 380 140, 540 240 C 610 285, 670 210, 710 250"
+            stroke="#9E472A"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <!-- Courbe abstraite fine -->
+          <path
+            class="brush-stroke stroke-3"
+            d="M 220 110 C 290 70, 410 95, 450 165 C 490 235, 390 320, 310 285"
+            stroke="#5A5854"
+            stroke-width="1.25"
+            stroke-linecap="round"
+          />
+          <!-- Cercle d'atelier -->
+          <circle
+            class="brush-circle"
+            cx="400"
+            cy="210"
+            r="118"
+            stroke="#E6E1D8"
+            stroke-width="1"
+          />
+        </svg>
+
+        <div class="intro-typography">
+          <div class="intro-name-wrap">
+            <p class="intro-name">Prince-Abraham Junior Shègun ADJAHO</p>
+          </div>
+          <p class="intro-signature">Juriste • Écrivain • Artiste</p>
+        </div>
+      </div>
+    </div>
+
     <header>
       <nav class="navbar">
         <a href="index.html" class="logo">
@@ -33,7 +100,7 @@
           >☰</label
         >
         <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
           <li><a href="presentation.html">À propos</a></li>
           <li><a href="#skills">Compétences</a></li>
           <li><a href="chiens.html">Conseils chiens</a></li>
@@ -44,26 +111,44 @@
 
     <main>
       <section class="hero">
-        <p class="surtitle">JURISTE • ÉCRIVAIN • ARTISTE</p>
-        <h1>Prince-Abraham<br />Junior Shègun<br /><span>ADJAHO</span></h1>
-        <p>
-          Un univers où le droit, les mots et l'art se rencontrent pour donner
-          naissance à des projets singuliers.
-        </p>
-        <div class="buttons">
-          <a href="presentation.html" class="btn">Découvrir mon univers</a>
-          <a href="contact.html" class="btn secondary">Me contacter</a>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="surtitle">JURISTE • ÉCRIVAIN • ARTISTE</p>
+            <h1>
+              Prince-Abraham<br />Junior Shègun<br /><span>ADJAHO</span>
+            </h1>
+            <p>
+              Un univers où le droit, les mots et l'art se rencontrent pour
+              donner naissance à des projets singuliers.
+            </p>
+            <div class="buttons">
+              <a href="presentation.html" class="btn">Découvrir mon univers</a>
+              <a href="contact.html" class="btn secondary">Me contacter</a>
+            </div>
+          </div>
+
+          <div class="hero-portrait-wrap" data-parallax="0.04">
+            <div class="hero-portrait-frame">
+              <img
+                src="images/logo.jpeg"
+                alt="Portrait de Prince-Abraham Junior Shègun ADJAHO"
+                loading="eager"
+              />
+            </div>
+            <span class="portrait-caption">Atelier &amp; Droit — Bénin</span>
+          </div>
         </div>
       </section>
 
       <section class="profile-section">
-        <div class="profile-photo">
+        <div class="profile-photo" data-reveal="mask">
           <img
             src="images/logo.jpeg"
             alt="Portrait de Prince-Abraham Junior Shègun ADJAHO"
+            loading="lazy"
           />
         </div>
-        <div class="profile-content">
+        <div class="profile-content" data-reveal="editorial">
           <p class="surtitle">À PROPOS DE MOI</p>
           <h2>Un parcours entre le droit, les mots et <span>l'art.</span></h2>
           <p>
@@ -75,7 +160,7 @@
         </div>
       </section>
 
-      <section class="intro">
+      <section class="intro" data-reveal="editorial">
         <p class="surtitle">BIENVENUE</p>
         <h2>Plusieurs compétences.<br /><span>Un même univers.</span></h2>
         <p>
@@ -90,7 +175,11 @@
       </section>
 
       <section class="skills" id="skills">
-        <a href="juridique.html" class="skill-card"
+        <a
+          href="juridique.html"
+          class="skill-card"
+          data-reveal="stagger"
+          data-delay="0"
           ><span>01</span>
           <h3>Juridique</h3>
           <p>
@@ -98,7 +187,11 @@
           </p>
           <strong>Découvrir →</strong></a
         >
-        <a href="ecriture.html" class="skill-card"
+        <a
+          href="ecriture.html"
+          class="skill-card"
+          data-reveal="stagger"
+          data-delay="80"
           ><span>02</span>
           <h3>Écriture</h3>
           <p>
@@ -106,19 +199,31 @@
           </p>
           <strong>Découvrir →</strong></a
         >
-        <a href="graffiti.html" class="skill-card"
+        <a
+          href="graffiti.html"
+          class="skill-card"
+          data-reveal="stagger"
+          data-delay="160"
           ><span>03</span>
           <h3>Graffiti</h3>
           <p>Une expression artistique libre, urbaine et créative.</p>
           <strong>Voir les créations →</strong></a
         >
-        <a href="dessin.html" class="skill-card"
+        <a
+          href="dessin.html"
+          class="skill-card"
+          data-reveal="stagger"
+          data-delay="240"
           ><span>04</span>
           <h3>Dessin</h3>
           <p>Découvrez mon univers graphique à travers mes créations.</p>
           <strong>Découvrir →</strong></a
         >
-        <a href="chiens.html" class="skill-card"
+        <a
+          href="chiens.html"
+          class="skill-card"
+          data-reveal="stagger"
+          data-delay="320"
           ><span>05</span>
           <h3>Conseils pour chien</h3>
           <p>Prendre soin d'un chien, c'est une responsabilité.</p>
@@ -126,7 +231,7 @@
         >
       </section>
 
-      <section class="home-cta">
+      <section class="home-cta" data-reveal="editorial">
         <p class="surtitle">UN PROJET ?</p>
         <h2>Une idée mérite<br /><span>de prendre forme.</span></h2>
         <p>
@@ -144,5 +249,6 @@
       <a href="admin.html" class="admin-access">Accès administrateur</a>
     </footer>
     <script src="public-content.js"></script>
+    <script src="motion.js"></script>
   </body>
 </html>

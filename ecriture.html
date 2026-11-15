@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Écriture - Prince-Abraham</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="images/img12.png" />
   </head>
@@ -33,7 +39,7 @@
 
     <main class="page">
       <p class="surtitle">02 — ÉCRITURE</p>
-      <h1>Les mots<br /><span>prennent vie.</span></h1>
+      <h1 data-reveal="ecriture">Les mots<br /><span>prennent vie.</span></h1>
 
       <div class="page-content">
         <p>
@@ -49,7 +55,7 @@
           <p class="surtitle">SERVICES PROPOSÉS</p>
           <h2>Des textes pensés pour <span>chaque projet.</span></h2>
           <div class="service-grid">
-            <article class="service-card">
+            <article class="service-card" data-reveal="stagger">
               <span>01</span>
               <h3>Rédaction de textes</h3>
               <p>
@@ -57,7 +63,7 @@
                 objectif.
               </p>
             </article>
-            <article class="service-card">
+            <article class="service-card" data-reveal="stagger">
               <span>02</span>
               <h3>Correction</h3>
               <p>
@@ -65,7 +71,7 @@
                 texte.
               </p>
             </article>
-            <article class="service-card">
+            <article class="service-card" data-reveal="stagger">
               <span>03</span>
               <h3>Texte personnalisé</h3>
               <p>
@@ -80,7 +86,7 @@
           ressentir. »
         </div>
 
-        <div class="contact-buttons">
+        <div class="contact-buttons" data-reveal="editorial">
           <a
             href="https://wa.me/2290198864845"
             class="contact-btn whatsapp-btn"
@@ -99,5 +105,6 @@
 
     <footer><p>© 2026 Prince-Abraham Junior Shègun ADJAHO</p></footer>
     <script src="public-content.js"></script>
+    <script src="motion.js"></script>
   </body>
 </html>
