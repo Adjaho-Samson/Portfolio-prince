@@ -4,256 +4,265 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Administration - Prince-Abraham</title>
+    <title>Administration — Prince-Abraham Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
   </head>
   <body class="admin-body">
+    <a class="skip-link" href="#admin-main">Aller au contenu</a>
+
     <section id="login-view" class="admin-login" aria-labelledby="login-title">
       <div class="admin-login-card">
         <a href="index.html" class="admin-brand">
-          <img src="images/logo.jpeg" alt="Prince-Abraham" />
-          <span>Prince-Abraham<small>Studio de contenu</small></span>
+          <img src="images/logo.jpeg" alt="" width="1080" height="720" />
+          <span>Prince-Abraham <em>Art</em><small>Studio éditorial</small></span>
         </a>
-        <p class="admin-kicker">ESPACE SECURISE</p>
+        <p class="admin-kicker">Espace sécurisé</p>
         <h1 id="login-title">Connexion administrateur</h1>
-        <p>Connectez-vous pour gérer les articles et les pages du site.</p>
+        <p class="admin-login-desc">
+          Connectez-vous pour gérer les articles publiés et les textes
+          principaux du site.
+        </p>
         <form id="login-form">
-          <label for="login-password">Mot de passe</label>
-          <input
-            id="login-password"
-            type="password"
-            autocomplete="current-password"
-            required
-          />
-          <button class="admin-action" type="submit">Se connecter</button>
+          <div class="admin-field">
+            <label for="login-password">Mot de passe <span class="required-mark" aria-hidden="true">*</span></label>
+            <div class="password-input-wrap">
+              <input
+                id="login-password"
+                type="password"
+                autocomplete="current-password"
+                aria-describedby="login-error"
+                required
+              />
+              <button
+                type="button"
+                id="toggle-password"
+                class="password-toggle"
+                aria-label="Afficher le mot de passe"
+                aria-pressed="false"
+              >
+                <svg data-eye-show width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg data-eye-hide hidden width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </button>
+            </div>
+          </div>
           <small id="login-error" class="login-error" role="alert"></small>
+          <button id="login-submit" class="admin-action" type="submit">
+            Se connecter
+          </button>
         </form>
+        <a href="index.html" class="admin-back-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          <span>Retourner sur le site public</span>
+        </a>
       </div>
     </section>
-    <main class="admin-shell">
+
+    <main class="admin-shell" hidden>
       <aside class="admin-sidebar">
         <a href="index.html" class="admin-brand">
-          <img src="images/logo.jpeg" alt="Prince-Abraham" />
-          <span>Prince-Abraham<small>Studio de contenu</small></span>
+          <img src="images/logo.jpeg" alt="" width="1080" height="720" />
+          <span>Prince-Abraham <em>Art</em><small>Studio éditorial</small></span>
         </a>
         <nav class="admin-nav" aria-label="Navigation administration">
-          <button class="admin-nav-link is-active" data-view="overview">
-            Vue d'ensemble
+          <button type="button" class="admin-nav-link is-active" data-view="overview">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>Vue d'ensemble</span>
           </button>
-          <button class="admin-nav-link" data-view="articles">Articles</button>
-          <button class="admin-nav-link" data-view="pages">
-            Pages du site
+          <button type="button" class="admin-nav-link" data-view="articles">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>Articles</span>
+          </button>
+          <button type="button" class="admin-nav-link" data-view="pages">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            <span>Pages du site</span>
           </button>
         </nav>
         <div class="admin-sidebar-foot">
-          <span class="status-dot"></span>
-          <span>Site en ligne</span>
-          <a href="index.html"
-            >Voir le site <span aria-hidden="true">↗</span></a
-          >
+          <div class="admin-status-line">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Site en ligne</span>
+          </div>
+          <div class="admin-sidebar-actions">
+            <a href="index.html" class="admin-foot-link">
+              <span>Voir le site</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <button type="button" id="logout-btn" class="admin-logout-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              <span>Se déconnecter</span>
+            </button>
+          </div>
         </div>
       </aside>
 
-      <section class="admin-main">
+      <section class="admin-main" id="admin-main" tabindex="-1">
         <header class="admin-topbar">
           <div>
-            <p class="admin-kicker">ESPACE ADMINISTRATEUR</p>
+            <p class="admin-kicker">Espace administrateur</p>
             <h1 id="view-title">Vue d'ensemble</h1>
           </div>
-          <div class="admin-user">
-            <span class="admin-avatar">PA</span>
-            <span
-              ><strong>Prince-Abraham</strong
-              ><small>Administrateur</small></span
-            >
+          <div class="admin-topbar-right">
+            <a href="index.html" class="admin-secondary admin-mobile-site">
+              <span>Site</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <button type="button" id="logout-btn-mobile" class="admin-secondary admin-mobile-logout" aria-label="Se déconnecter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              <span>Quitter</span>
+            </button>
+            <div class="admin-user">
+              <span class="admin-avatar" aria-hidden="true">PA</span>
+              <span>
+                <strong>Prince-Abraham</strong>
+                <small>Administrateur</small>
+              </span>
+            </div>
           </div>
         </header>
 
         <div class="admin-notice" role="note">
-          <strong>Stockage sécurisé</strong>
-          <span
-            >Les changements sont enregistrés dans la base de données du site.
-            Votre session administrateur est protégée.</span
-          >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <strong>Stockage synchronisé</strong>
+            <span>Les articles publiés apparaissent automatiquement dans les carnets du site et les textes modifiés mettent à jour vos pages.</span>
+          </div>
         </div>
 
         <section id="overview-view" class="admin-view is-visible">
           <div class="admin-heading-row">
             <div>
-              <p class="admin-kicker">ACTIVITE DU SITE</p>
-              <h2>Le site en un coup d'oeil.</h2>
+              <p class="admin-kicker">État du contenu</p>
+              <h2>Le studio en un coup d'œil.</h2>
             </div>
-            <span class="date-chip"
-              >Derniers 30 jours <span aria-hidden="true">⌄</span></span
-            >
+            <button type="button" class="admin-action" data-quick-new>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>Nouvel article</span>
+            </button>
           </div>
+
           <div class="metric-grid">
             <article class="metric-card metric-primary">
-              <span class="metric-label">Visites</span><strong>2 846</strong
-              ><small><em>+18,4 %</em> vs mois dernier</small>
-              <div class="metric-spark spark-gold">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
+              <span class="metric-label">Articles publiés</span>
+              <strong id="stat-published">0</strong>
+              <small>Visibles sur le site public</small>
             </article>
             <article class="metric-card">
-              <span class="metric-label">Pages vues</span><strong>6 391</strong
-              ><small><em>+11,2 %</em> vs mois dernier</small>
-              <div class="metric-spark">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
+              <span class="metric-label">Brouillons</span>
+              <strong id="stat-drafts">0</strong>
+              <small>En cours de rédaction</small>
             </article>
             <article class="metric-card">
-              <span class="metric-label">Demandes reçues</span
-              ><strong>47</strong><small><em>+6,8 %</em> vs mois dernier</small>
-              <div class="metric-spark">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
+              <span class="metric-label">Pages gérées</span>
+              <strong id="stat-pages">0</strong>
+              <small>Textes d'accueil et d'intro</small>
             </article>
             <article class="metric-card">
-              <span class="metric-label">Temps moyen</span><strong>02:48</strong
-              ><small><em>+0:24</em> vs mois dernier</small>
-              <div class="metric-spark">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
+              <span class="metric-label">Dernière mise à jour</span>
+              <strong id="stat-latest" class="metric-date">—</strong>
+              <small>Horodatage base de données</small>
             </article>
           </div>
+
           <div class="admin-overview-grid">
             <article class="admin-panel traffic-panel">
               <div class="panel-heading">
                 <div>
-                  <p class="admin-kicker">FREQUENTATION</p>
-                  <h3>Visites cette semaine</h3>
+                  <p class="admin-kicker">Répartition éditoriale</p>
+                  <h3>Articles par univers</h3>
                 </div>
-                <strong>+18,4 %</strong>
+                <span class="panel-badge" id="stat-total-badge">0 articles</span>
               </div>
-              <div class="chart-wrap">
-                <div class="chart-y">
-                  <span>600</span><span>400</span><span>200</span><span>0</span>
-                </div>
-                <div class="chart">
-                  <div class="chart-line">
-                    <span style="--height: 34%"></span
-                    ><span style="--height: 47%"></span
-                    ><span style="--height: 42%"></span
-                    ><span style="--height: 64%"></span
-                    ><span style="--height: 55%"></span
-                    ><span style="--height: 83%"></span
-                    ><span style="--height: 72%"></span>
-                  </div>
-                  <div class="chart-x">
-                    <span>Lun</span><span>Mar</span><span>Mer</span
-                    ><span>Jeu</span><span>Ven</span><span>Sam</span
-                    ><span>Dim</span>
-                  </div>
-                </div>
-              </div>
+              <div
+                id="category-chart"
+                class="category-chart"
+                role="img"
+                aria-label="Répartition des articles par catégorie"
+              ></div>
             </article>
+
             <article class="admin-panel top-pages-panel">
               <div class="panel-heading">
                 <div>
-                  <p class="admin-kicker">CONTENU</p>
-                  <h3>Pages les plus vues</h3>
+                  <p class="admin-kicker">Pages configurables</p>
+                  <h3>Accès rapide</h3>
                 </div>
-                <button class="text-button" data-view-link="pages">
+                <button type="button" class="text-button" data-view-link="pages">
                   Gérer les pages →
                 </button>
               </div>
-              <ol class="top-pages">
-                <li>
-                  <span><b>01</b>Accueil</span
-                  ><strong>1 248 <small>vues</small></strong>
-                </li>
-                <li>
-                  <span><b>02</b>Conseils chiens</span
-                  ><strong>842 <small>vues</small></strong>
-                </li>
-                <li>
-                  <span><b>03</b>Présentation</span
-                  ><strong>617 <small>vues</small></strong>
-                </li>
-                <li>
-                  <span><b>04</b>Écriture</span
-                  ><strong>486 <small>vues</small></strong>
-                </li>
-              </ol>
+              <ol class="top-pages" id="overview-pages-list"></ol>
             </article>
           </div>
+
           <article class="admin-panel activity-panel">
             <div class="panel-heading">
               <div>
-                <p class="admin-kicker">JOURNAL</p>
-                <h3>Activité récente</h3>
+                <p class="admin-kicker">Journal réel</p>
+                <h3>Publications récentes</h3>
               </div>
-              <button class="text-button" data-view-link="articles">
-                Gérer le contenu →
+              <button type="button" class="text-button" data-view-link="articles">
+                Voir tous les articles →
               </button>
             </div>
-            <div class="activity-list">
-              <div>
-                <span class="activity-icon activity-publish">↗</span>
-                <p>
-                  <strong>Nouvel article publié</strong
-                  ><small>"Prendre soin de son chien au quotidien"</small>
-                </p>
-                <time>Il y a 2 h</time>
-              </div>
-              <div>
-                <span class="activity-icon activity-edit">✎</span>
-                <p>
-                  <strong>Page modifiée</strong
-                  ><small>La page « Présentation » a été mise à jour</small>
-                </p>
-                <time>Hier</time>
-              </div>
-              <div>
-                <span class="activity-icon activity-message">✉</span>
-                <p>
-                  <strong>Nouvelle demande de contact</strong
-                  ><small>Depuis la page Contact</small>
-                </p>
-                <time>Hier</time>
-              </div>
-            </div>
+            <div class="activity-list" id="recent-activity-list"></div>
           </article>
         </section>
 
         <section id="articles-view" class="admin-view">
           <div class="admin-heading-row">
             <div>
-              <p class="admin-kicker">BIBLIOTHEQUE</p>
+              <p class="admin-kicker">Bibliothèque</p>
               <h2>Articles</h2>
               <p class="admin-subtitle">
                 Publiez, modifiez ou retirez vos contenus éditoriaux.
               </p>
             </div>
-            <button class="admin-action" id="new-article">
-              + Nouvel article
+            <button type="button" class="admin-action" id="new-article">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>Nouvel article</span>
             </button>
           </div>
           <div class="content-toolbar">
-            <label class="search-field"
-              ><span aria-hidden="true">⌕</span
-              ><input
+            <label class="search-field">
+              <span class="sr-only">Rechercher un article</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input
                 id="article-search"
                 type="search"
-                placeholder="Rechercher un article" /></label
-            ><select id="article-filter" aria-label="Filtrer les articles">
+                placeholder="Rechercher par titre ou catégorie..."
+              />
+            </label>
+            <select id="article-category-filter" aria-label="Filtrer par catégorie">
+              <option value="all">Toutes les catégories</option>
+              <option value="Conseils chiens">Conseils chiens</option>
+              <option value="Écriture">Écriture</option>
+              <option value="Actualité">Actualité</option>
+              <option value="Art">Art</option>
+            </select>
+            <select id="article-filter" aria-label="Filtrer par statut">
               <option value="all">Tous les statuts</option>
-              <option value="published">Publié</option>
-              <option value="draft">Brouillon</option>
+              <option value="published">Publiés</option>
+              <option value="draft">Brouillons</option>
             </select>
           </div>
+          <p id="article-count-status" class="toolbar-status" role="status" aria-live="polite"></p>
           <div id="article-list" class="article-list"></div>
         </section>
 
         <section id="pages-view" class="admin-view">
           <div class="admin-heading-row">
             <div>
-              <p class="admin-kicker">STRUCTURE DU SITE</p>
+              <p class="admin-kicker">Structure du site</p>
               <h2>Pages du site</h2>
               <p class="admin-subtitle">
-                Modifiez les textes principaux affichés sur vos pages.
+                Modifiez les titres et textes d'introduction affichés sur vos pages publiques.
               </p>
             </div>
           </div>
@@ -262,81 +271,136 @@
       </section>
     </main>
 
-    <dialog id="article-dialog" class="admin-dialog">
+    <!-- Modale article -->
+    <dialog id="article-dialog" class="admin-dialog" aria-labelledby="dialog-title">
       <form method="dialog" id="article-form">
         <div class="dialog-heading">
           <div>
-            <p class="admin-kicker">EDITEUR</p>
+            <p class="admin-kicker">Éditeur d'article</p>
             <h2 id="dialog-title">Nouvel article</h2>
           </div>
-          <button value="cancel" class="dialog-close" aria-label="Fermer">
-            ×
+          <button type="button" value="cancel" class="dialog-close" data-close-dialog aria-label="Fermer la fenêtre">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </div>
         <input type="hidden" id="article-id" />
-        <label>Titre<input id="article-title" required maxlength="90" /></label>
-        <label
-          >Résumé<textarea
+        <div class="admin-field">
+          <div class="label-row">
+            <label for="article-title">Titre <span class="required-mark" aria-hidden="true">*</span></label>
+            <span class="char-counter" id="article-title-count">0 / 90</span>
+          </div>
+          <input id="article-title" required maxlength="90" />
+        </div>
+        <div class="admin-field">
+          <div class="label-row">
+            <label for="article-excerpt">Résumé <span class="required-mark" aria-hidden="true">*</span></label>
+            <span class="char-counter" id="article-excerpt-count">0 / 180</span>
+          </div>
+          <textarea
             id="article-excerpt"
             required
             rows="3"
             maxlength="180"
           ></textarea>
-        </label>
+        </div>
         <div class="form-row">
-          <label
-            >Catégorie<select id="article-category">
+          <div class="admin-field">
+            <label for="article-category">Catégorie</label>
+            <select id="article-category">
               <option>Conseils chiens</option>
               <option>Écriture</option>
               <option>Actualité</option>
               <option>Art</option>
-            </select></label
-          ><label
-            >Statut<select id="article-status">
+            </select>
+          </div>
+          <div class="admin-field">
+            <label for="article-status">Statut</label>
+            <select id="article-status">
               <option value="published">Publié</option>
               <option value="draft">Brouillon</option>
-            </select></label
-          >
+            </select>
+          </div>
         </div>
         <div class="dialog-actions">
-          <button value="cancel" class="admin-secondary">Annuler</button
-          ><button value="default" class="admin-action">
+          <button type="button" value="cancel" class="admin-secondary" data-close-dialog>
+            Annuler
+          </button>
+          <button type="submit" id="article-submit" class="admin-action">
             Enregistrer l'article
           </button>
         </div>
       </form>
     </dialog>
-    <dialog id="page-dialog" class="admin-dialog">
+
+    <!-- Modale page -->
+    <dialog id="page-dialog" class="admin-dialog" aria-labelledby="page-dialog-title">
       <form method="dialog" id="page-form">
         <div class="dialog-heading">
           <div>
-            <p class="admin-kicker">EDITEUR DE PAGE</p>
-            <h2>Modifier la page</h2>
+            <p class="admin-kicker">Éditeur de page</p>
+            <h2 id="page-dialog-title">Modifier la page</h2>
           </div>
-          <button value="cancel" class="dialog-close" aria-label="Fermer">
-            ×
+          <button type="button" value="cancel" class="dialog-close" data-close-dialog aria-label="Fermer la fenêtre">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </div>
         <input type="hidden" id="page-id" />
-        <label
-          >Titre principal<input id="page-title" required maxlength="90"
-        /></label>
-        <label
-          >Texte d'introduction<textarea
+        <div class="admin-field">
+          <div class="label-row">
+            <label for="page-title">Titre principal <span class="required-mark" aria-hidden="true">*</span></label>
+            <span class="char-counter" id="page-title-count">0 / 90</span>
+          </div>
+          <input id="page-title" required maxlength="90" />
+        </div>
+        <div class="admin-field">
+          <div class="label-row">
+            <label for="page-excerpt">Texte d'introduction <span class="required-mark" aria-hidden="true">*</span></label>
+            <span class="char-counter" id="page-excerpt-count">0 / 220</span>
+          </div>
+          <textarea
             id="page-excerpt"
             required
             rows="4"
             maxlength="220"
           ></textarea>
-        </label>
+        </div>
         <div class="dialog-actions">
-          <button value="cancel" class="admin-secondary">Annuler</button
-          ><button value="default" class="admin-action">
+          <button type="button" value="cancel" class="admin-secondary" data-close-dialog>
+            Annuler
+          </button>
+          <button type="submit" id="page-submit" class="admin-action">
             Enregistrer les modifications
           </button>
         </div>
       </form>
     </dialog>
+
+    <!-- Modale de confirmation de suppression -->
+    <dialog id="confirm-dialog" class="admin-dialog admin-dialog--compact" aria-labelledby="confirm-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="admin-kicker">Confirmation</p>
+          <h2 id="confirm-title">Supprimer cet article ?</h2>
+        </div>
+        <button type="button" class="dialog-close" data-close-dialog aria-label="Fermer la fenêtre">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <p id="confirm-message" class="confirm-message">
+        Cette action supprimera définitivement l'article sélectionné.
+      </p>
+      <div class="dialog-actions">
+        <button type="button" class="admin-secondary" data-close-dialog>
+          Annuler
+        </button>
+        <button type="button" id="confirm-delete-btn" class="admin-danger">
+          Supprimer définitivement
+        </button>
+      </div>
+    </dialog>
+
+    <div class="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
     <script src="admin.js"></script>
   </body>
 </html>

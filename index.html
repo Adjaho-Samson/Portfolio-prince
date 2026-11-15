@@ -19,37 +19,41 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YNL0QST49E"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YNL0QST49E");
+    </script>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-YNL0QST49E"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-YNL0QST49E");
-  </script>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <!-- Introduction artistique : la toile prend vie -->
-    <div id="art-intro" class="art-intro" aria-hidden="true">
+    <div
+      id="art-intro"
+      class="art-intro"
+      role="region"
+      aria-label="Introduction artistique"
+    >
       <button id="intro-skip" class="intro-skip" type="button">
-        Passer l'introduction <span aria-hidden="true">→</span>
+        <span>Passer l'introduction</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
-      <div class="intro-stage">
+      <div class="intro-stage" aria-hidden="true">
         <svg
           class="intro-brush"
           viewBox="0 0 900 320"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
         >
           <path
             class="brush-path"
@@ -71,7 +75,12 @@
           />
         </svg>
         <figure class="intro-emblem">
-          <img src="images/logo.jpeg" alt="" />
+          <img
+            src="images/logo.jpeg"
+            alt=""
+            width="1080"
+            height="720"
+          />
         </figure>
         <p class="intro-kicker">L'Atelier Vivant</p>
         <p class="intro-name">Prince-Abraham <em>Art</em></p>
@@ -83,7 +92,7 @@
     <header class="site-header" id="site-header">
       <nav class="navbar" aria-label="Navigation principale">
         <a href="index.html" class="logo" aria-label="Prince-Abraham Art — Accueil">
-          <img src="images/logo.jpeg" alt="" />
+          <img src="images/logo.jpeg" alt="" width="1080" height="720" />
           <span class="logo-word">Prince-Abraham <em>Art</em></span>
         </a>
         <button
@@ -99,9 +108,12 @@
         <ul class="nav-links">
           <li><a href="index.html" aria-current="page">Accueil</a></li>
           <li><a href="presentation.html">Univers</a></li>
-          <li><a href="#univers">Compétences</a></li>
-          <li><a href="chiens.html">Conseils chiens</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="juridique.html">Juridique</a></li>
+          <li><a href="ecriture.html">Écriture</a></li>
+          <li><a href="graffiti.html">Graffiti</a></li>
+          <li><a href="dessin.html">Dessin</a></li>
+          <li><a href="chiens.html">Chiens</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -123,8 +135,8 @@
       </p>
     </div>
 
-    <main class="site-main" id="contenu">
-      <!-- HERO — une introduction typographique, sans photographie -->
+    <main class="site-main" id="contenu" tabindex="-1">
+      <!-- HERO — une introduction typographique -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-main">
           <p class="hero-eyebrow"><span></span> L'Atelier Vivant · Bénin</p>
@@ -138,39 +150,80 @@
             donner naissance à des projets singuliers.
           </p>
           <div class="hero-actions">
-            <a href="presentation.html" class="btn">Découvrir mon univers <span aria-hidden="true">↗</span></a>
-            <a href="contact.html" class="btn btn--ghost">Me contacter <span aria-hidden="true">→</span></a>
+            <a href="presentation.html" class="btn">
+              <span>Découvrir mon univers</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <a href="contact.html" class="btn btn--ghost">
+              <span>Me contacter</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
           <div class="hero-meta">
             <span>Basé au Bénin</span><span>Droit · Écriture · Art</span>
           </div>
         </div>
         <aside class="hero-note" aria-label="Les disciplines de l'atelier">
-          <div class="hero-note-top"><span>Un esprit, plusieurs horizons</span><span>✳</span></div>
-          <p class="hero-note-title">Penser.<br><em>Créer.</em><br>Partager.</p>
-          <div class="hero-note-list">
-            <span><small>01</small> Juridique</span>
-            <span><small>02</small> Écriture</span>
-            <span><small>03</small> Arts visuels</span>
+          <div class="hero-note-top">
+            <span>Un esprit, plusieurs horizons</span>
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.93 4.93l14.14 14.14M2 12h20M4.93 19.07L19.07 4.93"/></svg>
+            </span>
           </div>
-          <p class="hero-note-foot">L'Atelier Vivant <span>↗</span></p>
+          <p class="hero-note-title">Penser.<br><em>Créer.</em><br>Partager.</p>
+          <nav class="hero-note-list" aria-label="Accès rapide aux disciplines">
+            <a href="juridique.html">
+              <span><small>01</small>Juridique</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="ecriture.html">
+              <span><small>02</small>Écriture</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="graffiti.html">
+              <span><small>03</small>Arts visuels</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="chiens.html">
+              <span><small>04</small>Conseils chiens</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </nav>
+          <a href="#univers" class="hero-note-foot">
+            <span>L'Atelier Vivant</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
         </aside>
-        <p class="hero-scroll" aria-hidden="true">Défiler pour explorer <span>↓</span></p>
+        <a href="#manifeste" class="hero-scroll">
+          <span>Défiler pour explorer</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </a>
       </section>
 
-      <!-- Bandeau défilant -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>Droit</span><i>✳</i><span>Écriture</span><i>✳</i
-          ><span>Graffiti</span><i>✳</i><span>Dessin</span><i>✳</i
-          ><span>Conseils</span><i>✳</i><span>Droit</span><i>✳</i
-          ><span>Écriture</span><i>✳</i><span>Graffiti</span><i>✳</i
-          ><span>Dessin</span><i>✳</i><span>Conseils</span><i>✳</i>
+      <!-- Bandeau défilant avec contrôle lecture/pause -->
+      <div class="marquee" role="region" aria-label="Disciplines de l'atelier">
+        <div class="marquee-track" aria-hidden="true">
+          <span>Droit</span><i>✦</i><span>Écriture</span><i>✦</i
+          ><span>Graffiti</span><i>✦</i><span>Dessin</span><i>✦</i
+          ><span>Conseils</span><i>✦</i><span>Droit</span><i>✦</i
+          ><span>Écriture</span><i>✦</i><span>Graffiti</span><i>✦</i
+          ><span>Dessin</span><i>✦</i><span>Conseils</span><i>✦</i>
         </div>
+        <button
+          id="marquee-toggle"
+          class="marquee-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Mettre en pause le bandeau des disciplines"
+        >
+          <svg data-icon-pause width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          <svg data-icon-play hidden width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span data-marquee-label>Pause</span>
+        </button>
       </div>
 
       <!-- 01 — L'Univers -->
-      <section class="manifesto">
+      <section class="manifesto" id="manifeste">
         <div class="section-head">
           <p class="surtitle">01 — L'Univers</p>
         </div>
@@ -195,9 +248,10 @@
               permettre à chaque visiteur de découvrir directement l'univers
               qui correspond à son besoin.
             </p>
-            <a href="presentation.html" class="link-arrow"
-              >En savoir plus <span aria-hidden="true">→</span></a
-            >
+            <a href="presentation.html" class="link-arrow">
+              <span>En savoir plus</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
             <p class="hand manifesto-note" aria-hidden="true">
               carnet n°1 — l'atelier
             </p>
@@ -242,7 +296,12 @@
               <circle cx="60" cy="8" r="3" />
             </svg>
           </span>
-          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+          <span class="discipline-cta">
+            Découvrir
+            <span aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </span>
         </a>
 
         <a href="ecriture.html" class="discipline" data-reveal="editorial">
@@ -261,7 +320,12 @@
               <path d="M48 66 L44 74 M62 52 L58 60 M76 38 L72 46" />
             </svg>
           </span>
-          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+          <span class="discipline-cta">
+            Découvrir
+            <span aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </span>
         </a>
 
         <a
@@ -280,10 +344,17 @@
             <img
               src="images/img1.jpeg"
               alt="Tableau Bxller, lettrage graffiti aux couleurs vives"
+              width="640"
+              height="640"
               loading="lazy"
             />
           </span>
-          <span class="discipline-cta">Voir les créations <span aria-hidden="true">→</span></span>
+          <span class="discipline-cta">
+            Voir les créations
+            <span aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </span>
         </a>
 
         <a href="dessin.html" class="discipline" data-reveal="editorial">
@@ -301,7 +372,12 @@
               <path d="M14 84 H106" stroke-dasharray="3 5" />
             </svg>
           </span>
-          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+          <span class="discipline-cta">
+            Découvrir
+            <span aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </span>
         </a>
 
         <a
@@ -320,10 +396,17 @@
             <img
               src="images/img9.jpeg"
               alt="Portrait de Nikè, chienne de Prince-Abraham"
+              width="720"
+              height="1280"
               loading="lazy"
             />
           </span>
-          <span class="discipline-cta">Découvrir <span aria-hidden="true">→</span></span>
+          <span class="discipline-cta">
+            Découvrir
+            <span aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </span>
         </a>
       </section>
 
@@ -331,45 +414,55 @@
       <section class="oeuvres">
         <div class="section-head section-head--row">
           <p class="surtitle">03 — Œuvres</p>
-          <a href="graffiti.html" class="link-arrow"
-            >Toutes les créations <span aria-hidden="true">→</span></a
-          >
+          <a href="graffiti.html" class="link-arrow">
+            <span>Toutes les créations</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
         <div class="oeuvres-grid">
-          <figure
-            class="gallery-placeholder oeuvre oeuvre--main"
-            data-reveal="mask"
-            tabindex="0"
-            role="button"
-            aria-label="Agrandir l'œuvre : Tableau Bxller"
-          >
-            <div class="frame">
+          <figure class="gallery-placeholder oeuvre oeuvre--main" data-reveal="mask">
+            <button
+              type="button"
+              class="frame gallery-trigger"
+              aria-label="Agrandir l'œuvre : Tableau Bxller"
+            >
               <img
                 src="images/img1.jpeg"
                 alt="Tableau Bxller, réalisation graffiti"
+                width="640"
+                height="640"
                 loading="lazy"
               />
-            </div>
+              <span class="frame-zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                <span>Agrandir</span>
+              </span>
+            </button>
             <figcaption>
               <span>01</span>
               <h3>Tableau Bxller</h3>
               <p>Lettrage graffiti aux couleurs vives sur fond noir.</p>
             </figcaption>
           </figure>
-          <figure
-            class="gallery-placeholder oeuvre oeuvre--wide"
-            data-reveal="mask"
-            tabindex="0"
-            role="button"
-            aria-label="Agrandir l'œuvre : Atella"
-          >
-            <div class="frame">
+
+          <figure class="gallery-placeholder oeuvre oeuvre--wide" data-reveal="mask">
+            <button
+              type="button"
+              class="frame gallery-trigger"
+              aria-label="Agrandir l'œuvre : Atella"
+            >
               <img
                 src="images/img2.jpeg"
                 alt="Lettrage Atella, réalisation graffiti"
+                width="724"
+                height="362"
                 loading="lazy"
               />
-            </div>
+              <span class="frame-zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                <span>Agrandir</span>
+              </span>
+            </button>
             <figcaption>
               <span>02</span>
               <h3>Atella</h3>
@@ -379,20 +472,25 @@
               </p>
             </figcaption>
           </figure>
-          <figure
-            class="gallery-placeholder oeuvre oeuvre--small"
-            data-reveal="mask"
-            tabindex="0"
-            role="button"
-            aria-label="Agrandir l'œuvre : Woman"
-          >
-            <div class="frame">
+
+          <figure class="gallery-placeholder oeuvre oeuvre--small" data-reveal="mask">
+            <button
+              type="button"
+              class="frame frame--bleed gallery-trigger"
+              aria-label="Agrandir l'œuvre : Woman"
+            >
               <img
                 src="images/img5.jpeg"
                 alt="Lettrage Woman, réalisation graffiti"
+                width="724"
+                height="362"
                 loading="lazy"
               />
-            </div>
+              <span class="frame-zoom" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                <span>Agrandir</span>
+              </span>
+            </button>
             <figcaption>
               <span>05</span>
               <h3>Woman</h3>
@@ -437,6 +535,7 @@
         </div>
         <nav aria-label="Pied de page">
           <ul>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="presentation.html">Univers</a></li>
             <li><a href="juridique.html">Juridique</a></li>
             <li><a href="ecriture.html">Écriture</a></li>
@@ -455,7 +554,10 @@
             >WhatsApp</a
           >
           <a href="mailto:princeadjaho20@gmail.com">Email</a>
-          <a href="admin.html" class="admin-access">Accès administrateur</a>
+          <a href="admin.html" class="admin-access">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Accès administrateur</span>
+          </a>
         </div>
       </div>
     </footer>

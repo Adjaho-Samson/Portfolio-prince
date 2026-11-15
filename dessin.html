@@ -27,7 +27,7 @@
     <header class="site-header" id="site-header">
       <nav class="navbar" aria-label="Navigation principale">
         <a href="index.html" class="logo" aria-label="Prince-Abraham Art — Accueil">
-          <img src="images/logo.jpeg" alt="" />
+          <img src="images/logo.jpeg" alt="" width="1080" height="720" />
           <span class="logo-word">Prince-Abraham <em>Art</em></span>
         </a>
         <button
@@ -47,8 +47,8 @@
           <li><a href="ecriture.html">Écriture</a></li>
           <li><a href="graffiti.html">Graffiti</a></li>
           <li><a href="dessin.html" aria-current="page">Dessin</a></li>
-          <li><a href="chiens.html">Conseils chiens</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="chiens.html">Chiens</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -70,7 +70,15 @@
       </p>
     </div>
 
-    <main class="site-main" id="contenu">
+    <main class="site-main" id="contenu" tabindex="-1">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <a href="presentation.html">Univers</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Dessin</span>
+      </nav>
+
       <section class="page-hero">
         <p class="surtitle">04 — Dessin</p>
         <h1 class="page-hero-title" data-reveal="lines">
@@ -142,6 +150,39 @@
         </p>
       </section>
 
+      <section class="process-section" data-reveal="stagger">
+        <div class="section-head section-head--row">
+          <p class="surtitle">Processus créatif</p>
+          <p class="section-head-note">Trois étapes simples pour commander une œuvre.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="process-head">
+              <span class="process-num">01</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Inspiration &amp; Échange</h3>
+            <p>Partagez votre photo de référence, votre thème ou le format souhaité.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-head">
+              <span class="process-num">02</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
+            </div>
+            <h3>Esquisse préparatoire</h3>
+            <p>Mise en place des proportions, des lignes directrices et validation de l'intention.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-head">
+              <span class="process-num">03</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Finition &amp; Remise</h3>
+            <p>Travail des contrastes, des détails et livraison de l'œuvre finalisée.</p>
+          </article>
+        </div>
+      </section>
+
       <div class="contact-buttons" data-reveal="editorial">
         <a
           href="https://wa.me/2290198864845"
@@ -154,6 +195,17 @@
           >Envoyer un email</a
         >
       </div>
+
+      <nav class="universe-pager" aria-label="Explorer les disciplines">
+        <a href="graffiti.html" class="universe-pager-link">
+          <small>Discipline précédente</small>
+          <span>← Graffiti</span>
+        </a>
+        <a href="chiens.html" class="universe-pager-link universe-pager-next">
+          <small>Discipline suivante</small>
+          <span>Conseils chiens →</span>
+        </a>
+      </nav>
     </main>
 
     <footer class="site-footer">
@@ -168,6 +220,7 @@
         </div>
         <nav aria-label="Pied de page">
           <ul>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="presentation.html">Univers</a></li>
             <li><a href="juridique.html">Juridique</a></li>
             <li><a href="ecriture.html">Écriture</a></li>
@@ -186,7 +239,10 @@
             >WhatsApp</a
           >
           <a href="mailto:princeadjaho20@gmail.com">Email</a>
-          <a href="admin.html" class="admin-access">Accès administrateur</a>
+          <a href="admin.html" class="admin-access">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Accès administrateur</span>
+          </a>
         </div>
       </div>
     </footer>
