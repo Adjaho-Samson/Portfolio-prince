@@ -17,7 +17,7 @@ if (pageId) {
       document.title = `${page.title} - Prince-Abraham`;
       const heading = document.querySelector("main h1");
       const introduction = document.querySelector(
-        ".hero > p:not(.surtitle), .page-content > p",
+        ".hero > p:not(.surtitle), .hero-content > p:not(.surtitle), .page-content > p",
       );
       if (heading) heading.textContent = page.title;
       if (introduction) introduction.textContent = page.excerpt;
