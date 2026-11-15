@@ -124,63 +124,38 @@
     </div>
 
     <main class="site-main" id="contenu">
-      <!-- HERO — composition monumentale -->
-      <section class="hero">
-        <p class="hero-side" aria-hidden="true">L'Atelier Vivant — Édition N°01</p>
-        <div class="hero-top">
-          <p class="surtitle">Juriste · Écrivain · Artiste</p>
-          <p class="hero-loc">Bénin — Atelier &amp; Droit</p>
-        </div>
-        <div class="hero-stage">
-          <svg
-            class="hero-brush"
-            viewBox="0 0 1200 420"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path
-              class="brush-path"
-              d="M 30 300 C 260 120, 480 360, 720 200 C 900 80, 1040 230, 1170 150"
-              stroke="#8E2638"
-              stroke-width="3"
-            />
-            <path
-              class="brush-path"
-              d="M 120 360 C 340 320, 560 160, 800 260 C 950 320, 1060 240, 1140 290"
-              stroke="#171717"
-              stroke-width="1.5"
-            />
-          </svg>
-          <h1 class="hero-title">
+      <!-- HERO — une introduction typographique, sans photographie -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-main">
+          <p class="hero-eyebrow"><span></span> L'Atelier Vivant · Bénin</p>
+          <h1 class="hero-title" id="hero-title">
             <span class="ht-line"><span style="--d: 0.05s">Prince-</span></span>
-            <span class="ht-line"><span style="--d: 0.18s">Abraham</span></span>
-            <span class="ht-art" aria-hidden="true">Art</span>
+            <span class="ht-line"><span style="--d: 0.18s">Abraham<span class="hero-title-dot">.</span></span></span>
           </h1>
-          <figure class="hero-emblem" data-parallax="0.05">
-            <img
-              src="images/logo.jpeg"
-              alt="Emblème Prince-Abraham Art : couronne, balance de la justice, livre et plume d'or sur fond noir"
-            />
-            <figcaption class="hand">l'atelier — Bénin</figcaption>
-          </figure>
-          <p class="hero-fullname" data-cms-title>
-            Prince-Abraham Junior Shègun <strong>ADJAHO</strong>
-          </p>
-        </div>
-        <div class="hero-bottom">
+          <p class="hero-fullname" data-cms-title>Prince-Abraham Junior Shègun <strong>ADJAHO</strong></p>
           <p class="hero-tagline" data-cms-excerpt>
             Un univers où le droit, les mots et l'art se rencontrent pour
             donner naissance à des projets singuliers.
           </p>
           <div class="hero-actions">
-            <a href="presentation.html" class="btn">Découvrir mon univers</a>
-            <a href="contact.html" class="btn btn--ghost">Me contacter</a>
+            <a href="presentation.html" class="btn">Découvrir mon univers <span aria-hidden="true">↗</span></a>
+            <a href="contact.html" class="btn btn--ghost">Me contacter <span aria-hidden="true">→</span></a>
           </div>
-          <p class="hero-scroll" aria-hidden="true">
-            Défiler <span>↓</span>
-          </p>
+          <div class="hero-meta">
+            <span>Basé au Bénin</span><span>Droit · Écriture · Art</span>
+          </div>
         </div>
+        <aside class="hero-note" aria-label="Les disciplines de l'atelier">
+          <div class="hero-note-top"><span>Un esprit, plusieurs horizons</span><span>✳</span></div>
+          <p class="hero-note-title">Penser.<br><em>Créer.</em><br>Partager.</p>
+          <div class="hero-note-list">
+            <span><small>01</small> Juridique</span>
+            <span><small>02</small> Écriture</span>
+            <span><small>03</small> Arts visuels</span>
+          </div>
+          <p class="hero-note-foot">L'Atelier Vivant <span>↗</span></p>
+        </aside>
+        <p class="hero-scroll" aria-hidden="true">Défiler pour explorer <span>↓</span></p>
       </section>
 
       <!-- Bandeau défilant -->
