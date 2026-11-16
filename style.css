@@ -4183,3 +4183,86 @@ body.intro-done .ht-line > span {
     width: 100%;
   }
 }
+
+/* ---------- Direction artistique : atelier éditorial ----------
+   Les règles publiques sont volontairement isolées de l'administration. */
+body:not(.admin-body) {
+  --ivory: #eee8dd;
+  --bone: #f7f2e9;
+  --paper: #fbf8f2;
+  --ink: #20201e;
+  --ink-soft: #33312e;
+  --bordeaux: #833c37;
+  --bordeaux-deep: #642b28;
+  --bordeaux-on-dark: #f0b8a7;
+  --grey-ink: #5a554d;
+  --grey-on-dark: #d0c7ba;
+  background: var(--ivory);
+}
+body:has(.site-main) .site-header {
+  background: rgba(238, 232, 221, .96);
+  border-bottom: 1px solid rgba(32, 32, 30, .12);
+}
+body:has(.site-main) .logo-word { letter-spacing: -.04em; }
+body:has(.site-main) .nav-cta { border-radius: 100px; }
+body:has(.site-main) .btn { border-radius: 100px; }
+body:has(.site-main) .btn:hover { transform: translateY(-2px); }
+.hero {
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .8fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  min-height: min(760px, calc(100svh - var(--header-h)));
+  padding-top: clamp(3rem, 5vw, 5rem);
+}
+.hero-title { font-size: clamp(4rem, 8.8vw, 9rem); letter-spacing: -.065em; }
+.hero-note {
+  min-height: 570px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 180px 180px 8px 8px;
+  padding: clamp(2rem, 3.5vw, 3rem);
+  justify-content: flex-end;
+  background: #211d1b;
+}
+.hero-art { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-note::before { inset: 0; z-index: -1; border: 0; background: linear-gradient(180deg, rgba(20,17,16,.25) 0%, rgba(20,17,16,.74) 42%, #201b1a 100%); }
+.hero-note-top { margin-top: 5rem; color: #f5e8db; }
+.hero-note-title { margin: 1.5rem 0; font-size: clamp(2.5rem, 4vw, 4rem); }
+.hero-note-list a { border-color: rgba(255,255,255,.3); }
+.hero-note-foot { color: #eaded2; }
+.marquee { background: var(--bordeaux); color: #fff9ef; }
+.manifesto { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
+.manifesto-title { max-width: 13ch; }
+.manifesto-words li { border-color: rgba(32,32,30,.25); }
+.disciplines { padding-top: clamp(4rem, 8vw, 7rem); }
+.discipline { padding-top: clamp(2rem, 4vw, 3.5rem); padding-bottom: clamp(2rem, 4vw, 3.5rem); }
+.discipline-media { border-radius: 50% 50% 6px 6px; }
+.discipline--dark { background: #302d2a; }
+.oeuvres { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
+.oeuvres .frame, .gallery-grid .frame { border-radius: 6px; overflow: hidden; }
+.oeuvre--wide { margin-top: 8rem; }
+.cta { background: #3a2827; padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
+.cta::before { background: radial-gradient(closest-side, rgba(188,104,82,.22), transparent); }
+.cta-title { max-width: 14ch; font-size: clamp(3rem, 7vw, 7rem); }
+.site-footer { padding-top: clamp(5rem, 8vw, 8rem); }
+.footer-giant { color: var(--ink); -webkit-text-stroke: 0; opacity: .9; letter-spacing: -.06em; }
+.page-hero { padding-top: clamp(3rem, 6vw, 6rem); padding-bottom: clamp(4rem, 7vw, 7rem); }
+.page-hero-title, .contact-hero-title { letter-spacing: -.05em; }
+.page-hero-lede { max-width: 48ch; }
+.contact-composer-card { border-radius: 14px; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .hero-note { max-width: none; min-height: 500px; border-radius: 180px 180px 8px 8px; }
+  .oeuvre--wide { margin-top: 0; }
+}
+@media (max-width: 640px) {
+  .hero { gap: 2rem; padding-top: 3rem; }
+  .hero-title { font-size: clamp(3.1rem, 14vw, 5rem); }
+  .hero-note { min-height: 460px; padding: 2rem; border-radius: 150px 150px 8px 8px; }
+  .hero-note-top { margin-top: 4rem; }
+  .hero-note::before { inset: 0; }
+  .discipline-media { width: min(100%, 320px); }
+  .footer-giant { font-size: clamp(3.2rem, 12vw, 6rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  body:has(.site-main) .btn:hover, .discipline:hover .discipline-title { transform: none; }
+}

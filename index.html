@@ -19,75 +19,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-YNL0QST49E"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-YNL0QST49E");
-    </script>
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
-
-    <!-- Introduction artistique : la toile prend vie -->
-    <div
-      id="art-intro"
-      class="art-intro"
-      role="region"
-      aria-label="Introduction artistique"
-    >
-      <button id="intro-skip" class="intro-skip" type="button">
-        <span>Passer l'introduction</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </button>
-      <div class="intro-stage" aria-hidden="true">
-        <svg
-          class="intro-brush"
-          viewBox="0 0 900 320"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="brush-path"
-            d="M 40 230 C 200 90, 360 280, 520 140 C 640 40, 760 170, 860 90"
-            stroke="#171717"
-            stroke-width="3"
-          />
-          <path
-            class="brush-path"
-            d="M 90 270 C 260 240, 400 110, 580 210 C 680 265, 770 180, 830 230"
-            stroke="#8E2638"
-            stroke-width="2"
-          />
-          <path
-            class="brush-path"
-            d="M 240 70 C 320 40, 430 60, 470 130 C 510 200, 410 280, 330 250"
-            stroke="#8C8982"
-            stroke-width="1.25"
-          />
-        </svg>
-        <figure class="intro-emblem">
-          <img
-            src="images/logo.jpeg"
-            alt=""
-            width="1080"
-            height="720"
-          />
-        </figure>
-        <p class="intro-kicker">L'Atelier Vivant</p>
-        <p class="intro-name">Prince-Abraham <em>Art</em></p>
-        <p class="intro-roles">Juriste · Écrivain · Artiste</p>
-      </div>
-    </div>
-    <noscript><style>.art-intro{display:none}</style></noscript>
 
     <header class="site-header" id="site-header">
       <nav class="navbar" aria-label="Navigation principale">
@@ -164,6 +99,7 @@
           </div>
         </div>
         <aside class="hero-note" aria-label="Les disciplines de l'atelier">
+          <img class="hero-art" src="images/img1.jpeg" alt="" width="640" height="640" fetchpriority="high" />
           <div class="hero-note-top">
             <span>Un esprit, plusieurs horizons</span>
             <span aria-hidden="true">
